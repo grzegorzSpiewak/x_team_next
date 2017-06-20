@@ -1,0 +1,151 @@
+.section {
+	position: relative;
+	display: flex;
+	align-items: flex-start;
+}
+
+/* contents */
+.section__title {
+	font: 800 2.625rem/.85 'Open Sans', sans-serif; /* 42px */
+	text-transform: uppercase;
+	margin: 0;
+	letter-spacing: -1px;
+}
+.section__copy {
+	font-size: 1.125rem; /* 18px */
+	line-height: 1.5rem; /* 24px */
+	font-weight: 300;
+}
+.section__copy:last-child {
+	margin-bottom: 0;
+}
+
+/* color themes */
+.section--dark {
+	background-color: #130e2e;
+	background-image: linear-gradient(to right, #0c0a2b, #261a35);
+	color: #fff;
+}
+.section--light {
+	background-color: #edecf3;
+	color: #5a5665;
+}
+.section__title--light {
+	color: #272334;
+}
+
+.section__image__img {max-width: 100%;}
+
+/* Centered Hero, no CTA */
+.section--hero {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #261b35;
+	background-image: none;
+	text-align: center;
+}
+.section__body--hero {
+	padding: 4rem 0 3rem;
+}
+.section__title--hero {
+	margin-bottom: 2.625rem; /* 42px */
+}
+.section__copy--hero {
+	margin-bottom: 0;
+	font-size: 1.25rem; /* 20px */
+}
+
+.section__image {
+	overflow: hidden;
+}
+
+@media screen and (max-width: 1023px) {
+	.section {
+		flex-direction: column;
+		padding: 3rem 5%;
+		text-align: center;
+		align-items: center;
+	}
+	.section__copy {
+		max-width: 25em;
+	}
+	.section__image {
+		order: 1;
+		margin-bottom: 3rem;
+		max-width: 100%;
+	}
+	.section__body {
+		order: 2;
+	}
+}
+@media screen and (min-width: 1024px) {
+	.section {
+		/* Lea's technique to avoid the use of a .wrap div */
+		max-width: 1024px;
+    	padding: 6rem calc(50% - 480px);
+    	/* we want 1rem left/right separation (1024px/2 = 512px - 2rem = 480px) */
+	}
+	.section__title {
+		font-size: 4rem;
+		letter-spacing: -2px;
+		line-height: .85;
+		margin: -8px 0 0 0; /* -8px aligns title with aside picture */
+	}
+	.section__copy {
+		font-size: 1.4rem;
+		line-height: 1.3;
+	}
+
+	/* layouts / alignment */
+	.section__body {
+		max-width: 53%;
+	}
+	.section__body--left {
+		margin-right: auto;
+		margin-left: 1rem;
+	}
+	.section__body--right {
+		order: 2;
+		margin-left: auto;
+		margin-right: 1rem;
+	}
+
+	.section__image--left {margin-left: auto;}
+	.section__image--right {
+		margin-right: 3rem;
+		order: 1;
+	}
+	.section__body--center {
+		width: 100%;
+		max-width: 100%;
+		text-align: center;
+	}
+	.section__copy--center {
+		max-width: 27.5em;
+		margin: 0 auto;
+	}
+}
+@media screen and (min-width: 1280px) {
+	.section {
+		/* Lea's technique to avoid the use of a .wrap div */
+		max-width: 1280px;
+		padding: 8rem calc(50% - 608px);
+	}
+	.section__title {
+		margin-top: -.625rem; /* -10px aligns title with aside picture */
+	}
+	.section__body--left {
+		margin-left: 0;
+	}
+	.section__body--right {
+		margin-right: 0;
+	}
+	.section__copy {
+		font-size: 1.6rem;
+		line-height: 2.2rem;
+	}
+	.section__image--right {
+		margin-right: 6rem;
+	}
+}

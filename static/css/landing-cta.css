@@ -1,0 +1,24 @@
+.landing-cta {
+	background: url(../images/hero-homepage.jpg) center 20% no-repeat / cover;
+	text-align: center;
+	color: #fff;
+}
+.landing-cta .wrap {
+	height: 600px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.landing-cta__title {
+  font: 800 3rem/2.8rem 'Open Sans',sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  margin: 0 0 2.5rem;
+}
+.landing-cta__caption {
+  font-size: 1.25rem;
+  line-height: 1.2;
+  max-width: 42rem;
+  margin: 0 auto 2rem;
+}

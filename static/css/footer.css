@@ -1,0 +1,97 @@
+.footer__links {
+	background-color: #f0eff2;
+	color: #ebeaed;
+}
+.footer__links .wrap {
+    display: flex;
+    justify-content: center;
+}
+.footer__column:last-child {
+	margin-left: auto;
+	width: 15%;
+}
+.footer__list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.footer__link {
+	text-decoration: none;
+	color: #938e9f;
+	font-size: 1.125rem; /* 18px */
+}
+.footer__link:hover {
+	color: #272334;
+}
+.footer__title {
+	font: 1.125rem 'Raleway', sans-serif; /* 18px */
+	text-transform: uppercase;
+	color: #272334;
+	margin: 0 0 1em;
+}
+.footer__colophon {
+	overflow: hidden;
+	padding: 2em 0;
+	color: #d6d6d6;
+}
+.footer__colophon__logo {
+	display: inline-block;
+	line-height: 3rem;
+	width: 94px;
+	height: 32px;
+    position: relative;
+    overflow: hidden;
+}
+.footer__colophon__address {
+	font-style: normal;
+	line-height: 2.5625rem; /* 41px */
+}
+@media screen and (max-width: 1023px) {
+	.footer__links {
+		text-align: center;
+		padding: 1.5rem 0;
+	}
+	.footer__column:not(:first-child) {
+		display: none;
+	}
+	.footer__title {display: none;}
+	.footer__link {
+		line-height: 1.75rem;
+		margin: .75rem 0;
+		display: block;
+	}
+	.footer__colophon {
+		text-align: center;
+		font-size: .9rem;
+	}
+	.footer__colophon__logo {
+		width: 94px;
+		height: 32px;
+	}
+}
+@media screen and (min-width: 1024px) {
+	.footer__link {
+		font-size: 1rem; /* 16px */
+	}
+	.footer__column {
+		flex-grow: 1;
+	    max-width: 28%;
+	}
+	.footer__column:last-child {
+	    max-width: 120px;
+	}
+	.footer__item--mobile {
+		display: none;
+	}
+	.footer__colophon__logo {
+		float: left;
+		width: 120px;
+		height: 42px;
+	}
+	.footer__colophon__address {
+		float: right;
+		font-style: normal;
+		font-size: 1rem; /* 16px */
+		line-height: 2.5625rem; /* 41px */
+	}
+}

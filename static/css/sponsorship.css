@@ -1,0 +1,10 @@
+.sponsorship,
+.sponsorship .section--light {
+	background-color: #fff;
+    color: #5a5665;
+}
+@media screen and (min-width: 1024px) {
+	.sponsorship {
+		padding: 2rem 0 8rem;
+	}
+}

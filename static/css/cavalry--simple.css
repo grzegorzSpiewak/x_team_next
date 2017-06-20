@@ -1,0 +1,48 @@
+/* used on Success page */
+.cavalry__title--simple {
+	font: 800 2rem/1 'Open Sans', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	color: #272334;
+	margin-top: 0;
+}
+.cavalry__item__text--simple {
+	text-decoration: none;
+	color: #272334;
+}
+@media screen and (max-width: 1023px) {
+	.cavalry__item__text--simple {
+		margin: 1rem auto 3rem;
+	}
+	.cavalry__item:not(:first-child) .cavalry__item__pic--simple {
+		display: block;
+	}
+	.cavalry__item__pic--simple {
+		max-width: 600px;
+		margin: auto;
+		height: auto;
+	}
+	.cavalry__item__pic__img--simple {
+		margin-top: 0;
+	}
+}
+@media screen and (min-width: 1024px) {
+	/* Simple version */
+	.cavalry__title--simple {
+		font: 800 3rem/6rem 'Open Sans', sans-serif;
+		text-transform: uppercase;
+		letter-spacing: -2px;
+		color: #272334;
+		margin-top: 0;
+	}
+	.cavalry__item__pic--simple {
+		max-height: 328px;
+		overflow: hidden;
+	}
+	.cavalry__item__text--simple {
+		font-size: 1.25rem;
+		line-height: 1.2;
+		color: #272334;
+		margin-top: 2rem;
+	}
+}

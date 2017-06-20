@@ -1,0 +1,107 @@
+/* Portfolio page */
+.section--portfolio__quote {
+	font-size: 1.125rem; /* 18px */
+	line-height: 1.5rem; /* 24px */
+    font-style: normal;
+    margin: 3rem 0 1rem;
+}
+.section--portfolio__quote::before {
+	content: '';
+	background: url('../images/icons/quotes.svg') no-repeat;
+	background-size: 100%;
+	display: block;
+	width: 2.75rem; /* 44px */
+	height: 1.875rem; /* 30px; */
+	margin: auto;
+}
+.section--portfolio__quote__text {
+	margin-top: .5em;
+}
+.section--portfolio__quote__cite {
+	font-size: 1.2rem;
+	font-style: normal;
+	color: #272334;
+}
+
+@media screen and (max-width: 1023px) {
+	.section__title--portfolio {
+		font-size: 1.875rem; /* 30px */
+		text-align: center;
+		margin: 1em 0 .75em;
+		letter-spacing: -2px;
+	}
+	.section__copy--portfolio {
+		font-size: 1.125rem; /* 18px */
+		line-height: 1.5rem; /* 24px */
+		text-align: center;
+		margin: auto;
+	}
+	.section--portfolio .btn {
+		display: none;
+	}
+	.section__image--portfolio {
+		max-width: 100%;
+		margin: 1rem auto 0;
+	}
+	.section--portfolio__quote {
+		max-width: 25em;
+		text-align: center;
+	}
+	.section--portfolio__quote::before {
+		margin: auto;
+	}
+	.section--portfolio__quote__cite {
+		color: #5a5665;
+	}
+	.section--portfolio__quote__name {
+		display: block;
+		font-weight: bold;
+	}
+	/* image goes below text */
+	.section--portfolio .section__image {
+		order: 2;
+		margin: 2rem auto -3rem;
+	}
+	.section--portfolio .section__body {
+		order: 1;
+	}
+}
+@media screen and (min-width: 1024px) {
+	.section--portfolio .section__body--left {
+		margin-right: 5%;
+	}
+	.section--portfolio {
+		padding-bottom: 0;
+	}
+	.section__title--portfolio {
+		font-size: 3.5rem;
+		margin-bottom: 0;
+	}
+	.section__copy--portfolio {
+		margin: 3rem 0;
+	}
+	.section--portfolio__quote {
+	    font-size: 1.6rem;
+    	line-height: 1.2;
+		margin: 4rem 0 3.5rem;
+	}
+	.section--portfolio__quote::before {
+		margin-left: 0;
+		width: 3.1875rem; /* 51px */
+		height: 2.1875rem; /* 35px */
+	}
+	.section--portfolio__quote__cite {
+		font-weight: bold;
+	}
+}
+@media screen and (min-width: 1280px) {
+	.section--portfolio__quote {
+		font-size: 1.7rem;
+	    line-height: 2.3rem;
+	    margin: 4.5rem 0 4rem;
+	}
+	.section--portfolio__quote::before {
+		width: 4.5625rem; /* 73px */
+		height: 3.125rem; /* 50px; */
+	}
+}

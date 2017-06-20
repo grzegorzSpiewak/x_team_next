@@ -1,0 +1,63 @@
+/* displayed on Job Landing, Hire & Join pages */
+
+/* collapsing FAQ answers with pure CSS*/
+.faq__radio {display: none;}
+
+@media screen and (max-width: 800px) {
+	.faq__title {margin-top: 4rem;}
+	.faq__text {
+		padding-left: 2rem;
+	}
+	.faq__title {
+		cursor: pointer;
+    margin: 2rem 0 .5rem;
+    padding-left: 2rem;
+    position: relative;
+    text-align: left; 
+	}
+	.faq__title label {
+		cursor: pointer;
+		display: block;
+	}
+	.faq__title::before, .faq__title::after {
+		display: inline-block;
+		content: '';
+		position: absolute;
+		background-color: #5a5665;
+		transform-origin: center;
+		transition: transform .3s ease-out;
+	}
+	.faq__title::before {
+		width: 20px;
+		height: 2px;		
+		left: 0;
+		top: 11px;
+	}
+	.faq__title::after {
+		width: 2px;
+		height: 20px;
+		left: 9px;
+		top: 2px;
+	}
+	.faq__radio:checked ~ .faq__title::after {
+		transform: rotate(90deg);
+	}
+	.faq__radio:checked ~ .faq__text { 
+		margin-bottom: 4rem;
+		font-size: 1.25rem;
+		opacity: 1;
+		height: auto; 
+		transition: 
+		font-size .2s ease-out, 
+		opacity .3s .2s ease-out, 
+		margin-bottom .2s ease-out;
+	} 
+	.faq__text {
+		line-height: 2.1rem;
+		overflow: hidden;
+		height: 0;
+		margin-bottom: 0;
+		font-size: 0;
+		opacity: 0;
+	}
+}

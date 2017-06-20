@@ -1,0 +1,52 @@
+.team--grid__list {
+	margin: 0 auto 3.75rem;
+	padding: 0;
+	list-style: none;
+	text-align: center
+}
+.team--grid__item {
+	max-width: 400px;
+	font-size: 1.125rem; /* 18px */
+	line-height: 1.2;
+	margin: 0 auto 1.8rem;
+}
+.team--grid__pic {
+	display: block;
+	max-width: 100%;
+}
+.team--grid__name {
+	display: block;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #272334;
+	margin-top: 1rem;
+}
+.team--grid__role {
+	display: block;
+	font-weight: 300;
+	color: #938e9f;
+}
+@media screen and (min-width: 1024px) {
+	.team--grid__item {
+		display: inline-block;
+		width: 46%;
+		font-size: 1.25rem;
+		margin: 0 2% 5rem;
+	}
+	.team--grid__name {
+		margin-top: 1.5rem;
+	}
+}
+@media screen and (min-width: 1280px) {
+	.team--grid__item {
+		width: 30%;
+		font-size: 1.75rem; /* 28px */
+		margin: 0 auto 6.25rem; /* 100px */
+	}
+	.team--grid__item:nth-child(3n+2) {
+		margin: 0 1.5%;
+	}
+	.team--grid__name {
+		margin-top: 2rem;
+	}
+}

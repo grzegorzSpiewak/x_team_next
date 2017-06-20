@@ -1,0 +1,83 @@
+@media screen and (max-width: 1023px) {
+	.subscription {display: none;}
+}
+@media screen and (min-width: 1024px) {
+	.subscription {
+		text-align: center;
+		padding: 8rem 0;
+		background-color: #fff;
+	}
+	.subscription__title {
+		font-size: 2rem; /* 32px */
+		text-transform: uppercase;
+		color: #ff5964;
+		margin: 0;
+		letter-spacing: -1px;
+	}
+	.subscription__subtitle {
+		font-size: 1.625rem; /* 26px */
+		color: #5a5665;
+		margin: 0;
+	}
+	.subscription__form {
+		display: flex;
+		justify-content: center;
+		margin-top: 2rem;
+	}
+	.subscription__form__email {
+		background-color: #f5f4f7;
+		text-align: left;
+		width: 280px;
+		height: 53px;
+		padding: 0 1em;
+		border: none;
+	}
+	.subscription__form__email:focus {
+		outline-color: #ff5964;
+	}
+	.subscription__form__email::placeholder {
+		color: #5a5665;
+	}
+	.subscription__form__submit {
+		font: bold 1rem Raleway, sans-serif; /* 16px */
+		text-transform: uppercase;
+		width: 142px;
+		height: 53px;
+		border: none;
+		color: #fff;
+		background-color: #ff5964;
+		border-radius: 2px;
+		transition: background-color .3s ease-out;
+	}
+	.subscription__form__submit:hover {
+		background-color: #ff727b;
+	}
+
+	/* Join page */
+	.subscription__title--join {
+	  font: 800 4.5rem/.8 'Open Sans', sans-serif; /* 72px */
+	  text-transform: uppercase;
+	  letter-spacing: -3px;
+	  color: #272334;
+	  margin: 0 0 3.5rem;
+	}
+	.subscription__subtitle--join {
+	  font-size: 2.125rem; /* 34px */
+	  line-height: 2.75rem; /* 44px */
+	  color: #5a5665;
+	}
+	.subscription__form__name--join,
+	.subscription__form__lname--join,
+	.subscription__form__email--join {
+	  padding: 0 1em;
+	  margin: 1em 0;
+	  background-color: #ffffff;
+	  width: 620px;
+	  height: 78px;
+	  border-radius: 5px;
+	  border: solid 3px #938e9f;
+	}
+	#mc_embed_signup_scroll {
+		display: flex;
+	}
+}

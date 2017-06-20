@@ -1,0 +1,60 @@
+.btn {
+	display: inline-block;
+	margin: auto;
+	text-decoration: none;
+	line-height: 1.5;
+	padding: .3em .8em;
+	border: 2px solid #fff;
+	color: #fff;
+	border-radius: 2px;
+	transition: all .3s ease-out;
+}
+.btn:hover {
+	background-color: #fff;
+	color: #ff5965;
+}
+
+.btn--big {
+	border-width: 2px;
+	border-radius: 3px;
+	text-transform: uppercase;
+	padding: .75em 2.4em;
+	font: bold 1rem 'Raleway', sans-serif; /* 16px */
+}
+
+.btn--dark {
+	border-color: #130e2e;
+	color: #130e2e;
+}
+.btn--dark:hover {
+	background-color: #272334;
+	color: #fff;
+}
+
+.btn--red {
+	background-color: #ff5965;
+	border-color: #ff5965;
+	color: #fff;
+}
+.btn--red:hover {
+	background-color: #ff727b;
+	border-color: #ff727b;
+	color: #fff;
+}
+
+@media screen and (min-width: 1024px) {
+	.btn--big {
+		border-width: 3px;
+		border-radius: 3px;
+		padding: .9em 2.4em;
+		font-size: 1rem;
+	}
+	.btn--float_right {
+		float: right;
+	}
+}
+@media screen and (min-width: 1280px) {
+	.btn--big {
+		font-size: 1.2rem;	
+	}
+}

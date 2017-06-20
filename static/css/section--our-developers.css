@@ -1,0 +1,161 @@
+/* snapshot images */
+.section__image--we-build-trust,
+.section__image.section--weareactive {
+	overflow: hidden;
+}
+.section__image--we-build-trust {border-radius: 5px 0 0 0;}
+.section__image.section--weareactive {border-radius: 5px 5px 0 0;}
+
+.section__title.section--weareactive {
+	font-size: 2.625rem;
+}
+
+@media screen and (max-width: 1023px) {
+	.section__title--we-are-motivated,
+	.section__title--disciplined,
+	.section__title--we-build-trust,
+	.section__title--battle,
+	.section__title.section--weareactive {
+		font-size: 2.2rem;
+	}
+	.section__image--we-are-motivated {
+		display: none;
+	}
+	section.section--weareactive {
+		padding-bottom: 3rem;
+	}
+	p.section--weareactive {
+		max-width: 30em;
+	}
+	/* image goes below text */
+	.section__image--we-build-trust {
+		order: 2;
+		margin: 2rem auto -3rem;
+		max-width: 500px;
+	}
+	.section__body--we-build-trust {
+		order: 1;
+	}
+}
+@media screen and (min-width: 1024px) {
+	/* Our Developers page - We are motivated */
+	.section--we-are-motivated {
+		padding-top: 0;
+		padding-bottom: 0;
+		align-items: center;
+	}
+	.section__image--we-are-motivated {
+		padding-top: 4rem;
+		margin-right: -4rem;
+	}
+	.section__title--we-are-motivated {
+		font-size: 3.5rem;
+		margin-bottom: .75em;
+		letter-spacing: -2px;
+	}
+	.section__copy--we-are-motivated {
+		margin-bottom: 3.25rem;	
+	}
+
+	/* Our Developers page - We are disciplined */
+	.section--disciplined {
+		background: #130e2e url('../images/bg/x-team-disciplined-developers.jpg') no-repeat top center / cover;
+		height: 28vw;
+		display: flex;
+		align-items: center;
+	}
+	.section__copy--disciplined {
+		margin-bottom: 0;
+	}
+	.section__body--disciplined {
+		margin: auto;
+		max-width: 49em;
+	}
+
+	/* We build trust - right-aligned image */
+	.section--we-build-trust {
+		max-width: 100%;
+		align-items: flex-start;
+		padding-top: 6rem;
+		padding-right: 0;
+		padding-bottom: 6rem;
+	}
+	.section__body--we-build-trust {
+		margin-left: 0;
+		max-width: 46%;
+	}
+	.section__title--we-build-trust {
+		font-size: 3.5rem;
+		margin-top: .5em;
+	    margin-bottom: .75em;
+	    letter-spacing: -2px;
+	}
+	.section__image--we-build-trust {
+		width: 40%;
+		max-width: 600px;
+		box-shadow: -5px 1px 25px 3px rgba(100,100,100,.5);
+	}
+
+
+	/* We are disciplined */
+	.section--battle {
+		/*padding-top: 10rem;
+		padding-bottom: 10rem;*/
+		background: #130e2e url('../images/bg/x-team-experienced-developers.jpg') no-repeat top center / cover;
+		height: 28vw;
+		display: flex;
+		align-items: center;
+	}
+	.section__copy--battle {
+		margin: 2rem auto 0;
+		max-width: 43.75rem; /* 700px */
+	}
+
+	/* We are active */
+	section.section--weareactive {
+		padding-bottom: 0;
+	}
+	.section__title.section--weareactive {
+		margin-top: 0;
+		font-size: 3.5rem;
+		letter-spacing: -2px;
+	}
+}
+@media screen and (min-width: 1280px) {
+	.section__image--we-are-motivated {
+		margin-right: 0;
+	}
+	.section--we-build-trust {
+		padding-top: 8rem;
+		padding-bottom: 8rem;
+		padding-left: 6rem;
+	}
+	.section__body--we-build-trust {
+		margin-left: 1rem;
+	}
+}
+@media screen and (min-width: 1512px) {
+	.section--we-build-trust {
+		align-items: center;
+	}
+	.section__title--we-build-trust {
+		margin-top: 0;
+	}
+	.section__body--we-build-trust {
+		max-width: 36%;
+		margin-left: 9%;
+	}
+	.section__image--we-build-trust {
+		background: url('../images/x-team-trusted-developers-big.jpg') no-repeat;
+		background-size: 100%;
+		/* 1000 x 626 */
+		width: 40%;
+		padding-bottom: 25%;
+		max-width: none;
+		margin-right: 9%;
+		border-radius: 5px 5px 5px 0;
+	}
+	.section__image--we-build-trust .section__image__img {
+		display: none;
+	}
+}

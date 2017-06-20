@@ -1,0 +1,115 @@
+.quotes {display: none;}
+.quotes--mobile {display: block;}
+
+.quotes {
+	padding: 3rem 1rem;
+	background-color: #ff5965;
+	color: #fff;
+	text-align: center;
+}
+.quotes__quote {
+	margin: 0 auto;
+	font-size: 1.125rem; /* 18px */
+	line-height: 1.5rem; /* 24px */
+	max-width: 35em;
+}
+.quotes__quote::after {
+	content: '';
+	background: url('../images/icons/quote.png') no-repeat;
+	background-size: 100%;
+	display: block;
+	width: 44px;
+	height: 30px;
+	margin: 1.5rem 0 0 calc(50% - 22px);
+}
+.quotes__text {
+	margin: 0 auto 1rem;
+}
+.quotes__cite {
+	font-weight: bold;
+	font-size: 1.25rem; /* 20px */
+	font-style: normal;
+}
+.quotes__hide {
+	display: none;
+}
+
+/* CSS Carousel activated through JS */
+.quotes__input {
+	display: none;
+}
+.quotes__quotes {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.quotes__item {
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity .8s ease-out;
+	height: 0;
+	position: absolute;
+}
+.quotes__input:nth-of-type(1):checked ~ .quotes__item:nth-of-type(1),
+.quotes__input:nth-of-type(2):checked ~ .quotes__item:nth-of-type(2),
+.quotes__input:nth-of-type(3):checked ~ .quotes__item:nth-of-type(3),
+.quotes__input:nth-of-type(4):checked ~ .quotes__item:nth-of-type(4),
+.quotes__input:nth-of-type(5):checked ~ .quotes__item:nth-of-type(5),
+.quotes__input:nth-of-type(6):checked ~ .quotes__item:nth-of-type(6) {
+	visibility: visible;
+	opacity: 1;
+	height: auto;
+	position: relative;
+}
+
+@media screen and (min-width: 1024px) {
+	.quotes {
+		display: block;
+		padding: 6rem 0;
+	}
+	.quotes__quote {
+		max-width: 49rem;
+		font-size: 2rem;
+		line-height: 2.5rem;
+	}
+	.quotes--wider .quotes__quote {
+	    width: 27.5em;
+    	max-width: 90%;
+	}
+	.quotes__quote::after {
+		width: 60px;
+		height: 42px;
+		margin: 1.5rem 0 0 calc(50% - 30px);
+	}
+	.quotes__cite {
+		font-size: 1.2rem;
+	}
+	.btn--quotes {
+		margin-top: 4rem;
+	}
+	.quotes__hide {
+		display: inline-block;
+	}
+
+}
+
+@media screen and (min-width: 1280px) {
+	.quotes {
+		display: block;
+		padding: 7rem 0;
+	}
+	.quotes__quote {
+		font-size: 2.1rem;
+		line-height: 2.8rem;
+		min-height: 8em; /* so section height doesn't change on shorter quotes */
+	}
+	.quotes__quote::after {
+		width: 73px;
+		height: 50px;
+		margin: 1.5rem 0 0 calc(50% - 36px);
+	}
+	.quotes__cite {
+		font-size: 1.44444444444444rem; /* 26px */
+	}
+}

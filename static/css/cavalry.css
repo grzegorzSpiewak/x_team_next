@@ -1,0 +1,198 @@
+.cavalry {
+	background-color: #f3f2f6;
+	text-align: center;
+}
+.cavalry__title {
+	position: absolute;
+	margin-top: 2.6em;
+	width: 100%;
+	font: 800 2.625rem/.8 'Open Sans', sans-serif; /* 42px */
+	letter-spacing: -3px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+	text-shadow: 0 0 3px rgba(0,0,0,.1);
+}
+
+.cavalry__item__list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.cavalry__item__pic {
+	width: 100%;
+}
+
+.cavalry__item__pic__img {
+	max-width: 100%;
+}
+.cavalry__item__icon__img {
+	width: 100%;
+}
+.cavalry__item__title {
+	font: bold 1.25rem/1 'Source Sans Pro', sans-serif; /* 20px */
+	text-transform: uppercase;
+	margin-bottom: .4em;
+}
+.cavalry__item__text {
+	text-align: center;
+	font-size: 1.125rem; /* 18px */
+	line-height: 1.375rem; /* 22px */
+}
+
+/* Developers Links */
+.cavalry__item__link {
+	text-decoration: none;
+	color: #ff5965;
+	position: relative;
+}
+a[href="#"] {
+  pointer-events: none;
+}
+.cavalry__item__link::before, .cavalry__item__link::after {
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: -3px;
+	width: 0;
+	height: 1px;
+	transition: all .2s ease-out;
+	background-color: #ff5965;
+}
+.cavalry__item__link::before {left: 50%;}
+.cavalry__item__link::after {right: 50%;}
+.cavalry__item__link:hover::before {
+	left: 1px;
+	width: 50%;
+}
+.cavalry__item__link:hover::after {
+	right: 1px;
+	width: 50%;
+}
+
+/* Icons */
+.cavalry__item__icon__wrap {
+	height: 30px;
+	margin: 2em auto 0;
+}
+.cavalry__item__icon {
+	display: inline-block;
+	vertical-align: top;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 100%;
+}
+.cavalry__item__icon--people {
+	width: 34px;
+	height: 22px;
+	background-image: url('../images/icons/people.png');
+}
+.cavalry__item__icon--contract {
+	width: 25px;
+	height: 25px;
+	background-image: url('../images/icons/contract.png');
+}
+.cavalry__item__icon--graph {
+	width: 30px;
+	height: 20px;
+	background-image: url('../images/icons/graph.png');
+}
+.cavalry__item__icon--rocket {
+	width: 19px;
+	height: 24px;
+	background-image: url('../images/icons/rocket.png');
+}
+.cavalry__item__icon--world {
+	width: 24px;
+	height: 24px;
+	background-image: url('../images/icons/world.png');
+}
+.cavalry__item__icon--vr-goggles {
+	width: 26px;
+	height: 19px;
+	background-image: url('../images/icons/vr-goggles.png');
+}
+
+@media screen and (max-width: 1023px) {
+	.cavalry {
+		padding: 2.5rem 0; /* 40px */
+	}
+	.cavalry__item:not(:first-child) .cavalry__item__pic {
+		display: none;
+	}
+	.cavalry__item__pic {
+		height: 220px;
+		overflow: hidden;
+	}
+	.cavalry__item__pic__img {
+		margin-top: -60px;
+	}
+	.cavalry__item__text {
+		max-width: 400px;
+		margin: auto;
+	}
+}
+@media screen and (min-width: 1024px) {
+	.cavalry__title {
+		font-size: 5.5rem;
+		letter-spacing: -4px;
+		margin-top: 1.8em;
+	}
+	.cavalry__items {
+		display: flex;
+		justify-content: center;
+	}
+	.cavalry__item {
+		flex-grow: 1;
+		width: 30%;
+		max-width: 400px;
+		text-align: center;
+	}
+	.cavalry__item:nth-child(2) {margin: 0 3%;}
+	.cavalry__item__title {
+		font-size: 1.5rem;
+		line-height: 1.6rem;
+	}
+	.cavalry__item__text {
+		font-size: 1.3rem;
+		line-height: 1.2;
+	}
+	/* Icons */
+	.cavalry__item__icon__wrap {
+		height: 50px;
+	}
+	.cavalry__item__icon--people {
+		width: 44px;
+		height: 28px;
+	}
+	.cavalry__item__icon--contract {
+		width: 35px;
+		height: 35px;
+	}
+	.cavalry__item__icon--graph {
+		width: 40px;
+		height: 26px;
+	}
+	.cavalry__item__icon--rocket {
+		width: 32px;
+		height: 40px;
+	}
+	.cavalry__item__icon--world {
+		width: 40px;
+		height: 40px;
+	}
+	.cavalry__item__icon--vr-goggles {
+		width: 46px;
+		height: 33px;
+	}
+}
+@media screen and (min-width: 1280px) {
+	.cavalry__title {
+		font-size: 6rem;
+		letter-spacing: -5px;
+	}
+	.cavalry__item__title {
+		font-size: 1.6rem;
+		line-height: 1.8rem;
+	}
+}

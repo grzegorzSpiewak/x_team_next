@@ -1,0 +1,109 @@
+/* Unleash page - Commit Push Unleash */
+.section__copy--separations {
+	margin: 3.5rem auto;
+	position: relative;
+}
+.section__copy--separations::before,
+.section__copy--separations::after {
+	display: block;
+	content: '';
+	width: 60px;
+	height: 3px;
+	background-color: #e0dde5;
+	position: absolute;
+	left: 50%;
+	margin-left: -30px;
+}
+
+@media screen and (max-width: 1023px) {
+	.section--separations {
+		padding-top: 4rem;
+		text-align: center;
+	}
+	.section__copy--separations::before {top: -1.5rem;}
+	.section__copy--separations::after {bottom: -1.5rem;}
+}
+
+@media screen and (min-width: 1024px) {
+	.section--separations .section__title {
+		font-size: 3rem;
+	}
+	.section__copy--separations {
+		margin: 6rem auto 0;
+		position: relative;
+		max-width: 58rem;
+	}
+	.section__copy--separations::before,
+	.section__copy--separations::after {
+		width: 106px;
+		height: 5px;
+		margin-left: -53px;
+	}
+	.section__copy--separations::before {top: -3rem;}
+	.section__copy--separations::after {bottom: -3rem;}
+
+	/* Unleash page - We fund legacies */
+	.section__image--dev1-right {
+		background-image: url('../images/developers1-right.png');
+		width: 40%;
+		margin-right: 2rem;
+		/* Fix dev head cut */
+		background-size: contain;
+	}
+	.section--dev1-right .section__body {
+		max-width: 50%;
+	}
+
+	/* Unleash page - We build discipline */
+	.section--dev4 {
+		background: #130e2e url('../images/bg/hire-disciplined-developers.jpg') no-repeat left bottom;
+		background-size: cover;
+	}
+
+}
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+	.section--dev4 {
+		padding-top: 9rem;
+		padding-bottom: 9rem;
+	}
+	.section--dev4 .section__body {
+		text-align: center;
+		margin-right: auto;
+		max-width: 35em;
+	}
+}
+@media screen and (min-width: 1280px) {
+	.section--separations .section__title {
+		font-size: 3.5rem;
+	}
+	/* Unleash page - We build discipline */
+	.section--dev4 {
+		background-size: cover;
+		background-position: bottom left;
+		height: 23vw;
+		display: flex;
+	}
+	.section__image--dev4 {
+		background-image: url('../images/developers4.png');
+		background-size: contain;
+		width: 56%;
+		height: 120%;
+	}
+	.section--dev4 .section__body {
+		max-width: 39rem;
+	}
+
+	/* Unleash page - We found legacies */
+	.section--dev1-right .section__body {
+		max-width: 49%;
+	}
+}
+@media screen and (min-width: 1441px) {
+	.section__image--dev4 {
+		max-width: 50%;
+		max-height: 110%;
+	}
+	.section--dev4 {
+		background-image: none;
+	}
+}

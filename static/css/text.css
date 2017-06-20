@@ -1,0 +1,177 @@
+.text {
+	margin: 3rem auto;
+	background-color: #fff;
+	color: #5a5665;
+	counter-reset: index;
+}
+.text--no-title {
+	margin: -1rem auto;
+}
+.text--no-title--last {
+	margin-top: -1rem;
+}
+.text img {
+	display: block;
+	max-width: 100%;
+	width: 100%;
+	margin: 2em 0;
+}
+.text .text__link {
+	display: block;
+}
+
+/* responsive embedding videos */
+.text .video-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+	margin: 2rem 0;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+h4 {
+    margin: 1.5em 0 .5em 0;
+    font-size: 1.1em;
+}
+
+.text__title {
+	font: 800 1.25rem/1.2 'Open Sans', sans-serif; /* 20px */
+	text-transform: uppercase;
+	margin: 0 0 2rem;
+}
+.text__title--big {
+	font-size: 1.5rem;
+	color: #272334;
+}
+
+.text__item {
+	font-size: 1.45rem;
+	line-height: 2.4rem;
+}
+.text__item--post {
+	margin: 4rem 0;
+}
+.text--bullets {
+	padding-left: 1.9em;
+}
+.text--numbers {
+	list-style: none;
+}
+.text--numbers .text__item {
+	position: relative;
+}
+.text--numbers .text__item::before {
+	position: absolute;
+	left: -2.75em;
+	top: 2px;
+	font-size: .875rem; /* 14px */
+	line-height: 1.375rem; /* 22px */
+	text-align: center;
+	counter-increment: index;
+	content: counter(index);
+	background-color: #e8e8e9;
+	border-radius: 50%;
+	width: 1.375rem; /* 22px */
+	height: 1.375rem; /* 22px */
+}
+
+/* Posts & Quotes */
+.text--quotes, .text--posts {
+	display: none;
+}
+.text--quotes--has, .text--posts--has {
+	display: block;
+}
+
+
+/* Blockquotes */
+.text__title--tech_landing {
+	text-transform: uppercase;
+	color: #272334;
+}
+.text__quote {
+	font-size: 1.6rem;
+	line-height: 2.4rem;
+	display: block;
+	position: relative;
+	margin: 0 auto 3rem;
+}
+.text__quote::before {
+	content: url(../images/icons/quote-red.svg);
+	display: block;
+	color: #ff5964;
+	margin: auto;
+	text-align: center;
+}
+.text__cite {
+	display: block;
+	font: normal 700 1.2rem 'Raleway', sans-serif; /* 24px */
+	text-transform: uppercase;
+	color: #3d3b4f;
+	margin-top: 1rem;
+}
+.text__cite__company {
+	color: #5a5665;
+}
+
+
+@media screen and (max-width: 1023px) {
+	.text__item {
+		margin-bottom: 1rem;
+	}
+	.text__title--big {
+		font-size: 2rem;
+		text-align: center;
+	}
+	.text__quote {
+	    max-width: 28em;
+    	text-align: center;
+	}
+}
+@media screen and (min-width: 1024px) {
+	.text {
+		margin: 6rem auto;
+	}
+	.text--quotes--has, .text--posts--has {
+		margin-top: 0;
+	}
+	.text--no-title {
+		margin: -4.5rem auto;
+	}
+	.text--no-title--last {
+		margin-top: -4.5rem;
+	}
+	.text .wrap {
+		max-width: 52.5rem; /* 840px */
+	}
+	.text__title {
+		font-size: 1.75rem;
+		margin-bottom: 3rem;
+	}
+	.text__title--big {
+		font-size: 3rem;
+	}
+	.text--numbers .text__item::before {
+		top: calc(50% - .6rem);
+	}
+
+	/* Blockquotes */
+	.text__quote::before {
+		position: absolute;
+		top: -.4rem;
+		left: -4rem;
+	}
+	.text__cite {
+		font-size: 1.5rem; /* 24px */
+		margin-top: 2rem;
+	}
+}

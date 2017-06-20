@@ -1,0 +1,153 @@
+/* "cutout" sections // section templates that use an overflowed image */
+
+/* Form pages Hero */
+.section--join-app, .section--hire {
+	background-color: #261b35;
+	background-image: none;
+}
+
+@media screen and (max-width: 1023px) {
+	.section--dev1, 
+	.section--dev2, 
+	.section--dev3 {display: none;}
+	.section--dev1-right, .section--dev4 {
+		padding: 0 1rem 3rem;
+		text-align: center;
+	}
+	/* Form pages Hero */
+	.section__title--hire {
+		max-width: 7em;
+    	margin: auto;
+	}
+	.section--join-app .section__copy,
+	.section--hire .section__copy {
+		max-width: 12em;
+		margin: 1em auto;
+		font-size: 1.25rem; /* 20px */
+	}
+}
+@media screen and (min-width: 1024px) {
+	.section--cutout {
+		padding-top: 6rem;
+		padding-bottom: 6rem;
+	}
+	.section__image--cutout {
+		background-size: contain;
+		position: absolute;
+		bottom: 0;
+		height: 110%;
+		margin-bottom: 0;
+		background-position: center bottom;
+		background-repeat: no-repeat;
+	}
+	.section__image--left {right: 0;}
+	.section__image--right {left: 0;}
+
+	/* Home page - 10 Years in the Making */
+	.section__image--dev1 {
+		background-image: url('../images/developers1.png');
+		width: 39%;
+	}
+	/* Home page - Never Stop Learning */
+	.section__image--dev2 {
+		background-image: url('../images/developers2.png');
+		width: 43%;
+	}
+	/* Home page - Ordinary is not an option */
+	.section__image--dev3 {
+		background-image: url('../images/developers3.png');
+		width: 44%;
+	}
+
+	/* Form pages Hero */
+	.section--join-app, .section--hire {
+		padding-top: 12rem;
+		padding-bottom: 8rem;
+	}
+	.section__image--join-app, .section__image--hire {
+	    right: auto;
+	    left: 50%;
+	    margin-left: calc(512px - 36%);
+	}
+	.section__image--join-app {
+		width: 28%;
+		background-image: url('../images/developers6.png');
+	}
+	.section__image--hire {
+		width: 45%;
+	    margin-left: calc(512px - 40%);
+		background-image: url('../images/trusted-developers.png');
+	}
+
+	.section--join-app .section__body,
+	.section--hire .section__body {
+		max-width: 57%;
+	}
+}
+@media screen and (min-width: 1116px) {
+	.section__image--join-app {
+	    width: 25%;
+	    margin-left: calc(512px - 29%);
+	}
+	.section__image--hire {
+		width: 38%;
+		margin-left: calc(512px - 35%);
+	}
+}
+@media screen and (min-width: 1280px) {
+	.section--cutout {
+		padding-top: 8rem;
+		padding-bottom: 8rem;
+	}
+
+	/* Form pages - Hero section */
+	.section--join-app, .section--hire {
+		padding-top: 13rem;
+		padding-bottom: 10rem;
+	}
+	.section--join-app {
+		padding: 13rem calc(52% - 608px) 10rem; /* Ryan's fix */
+	}
+	.section__image--join-app {
+		width: 29%;
+	    margin-left: 8%;
+	}
+	.section__image--hire {
+		width: 38%;
+	    margin-left: calc(600px - 38%);
+	}
+	
+	/* Ryan styles */
+	.section--join-app .section__body, .section--hire .section__body {
+		margin-left: 5%;
+	}
+}
+@media screen and (min-width: 1300px) {
+	.section__image--join-app {
+	    width: auto;
+		min-width: 28%;
+	    max-height: 80%;
+	    background-size: contain;
+	}	
+}
+@media screen and (min-width: 1400px) {
+	.section__image--hire {
+		width: auto;
+		min-width: 34%;
+	    max-height: 80%;
+	    margin-left: calc(700px - 40%);
+	    background-size: contain;	
+	}
+}
+@media screen and (min-width: 1650px) {
+	.section__image--hire {
+		min-width: 30%;
+		margin-left: calc(850px - 40%);
+	}
+}
+@media screen and (min-width: 1750px) {
+	.section__image--join-app {
+		min-width: 20%;
+		margin-left: calc(850px - 35%);
+	}
+}

@@ -1,0 +1,23 @@
+/* Case Studies */
+.section--case_study .section__copy {
+	margin-bottom: 1.3em;
+}
+.section__title--case_study {
+	font-size: 1.875rem;
+	margin-bottom: .75em;
+	margin-top: 0;
+}
+.section--case_study .section__body {
+	max-width: 44rem;
+}
+@media screen and (min-width: 1024px) {
+	.section__title--case_study {
+		font-size: 3.5rem;
+	}
+	.section__image--case_study {
+		width: 475px;
+	}
+	.section--case_study .section__copy {
+		max-width: 90%;
+	}
+}

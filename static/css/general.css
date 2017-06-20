@@ -1,0 +1,37 @@
+.general {
+	padding: 3rem 0;
+}
+.general--center {
+	text-align: center;
+}
+.general--gray-intro {
+	background-color: #e4e2e8;
+	color: #5a5665;
+	text-align: center;
+}
+.general__body {
+	font-size: 1.125rem; /* 18px */
+	margin: auto;
+	color: #5a5665;
+}
+.general__title--none {
+	display: none;
+}
+.general__title--subtitle {
+	font-size: 1.25rem; /* 20px */
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #5a5665;
+}
+@media screen and (min-width: 1024px) {
+	.general {
+		padding: 10rem 0; /* 160px */
+	}
+	.general__title--subtitle {
+		font-size: 1.875rem; /* 30px */
+	}
+	.general__body {
+		font-size: 1.625rem; /* 26px */
+		max-width: 52.5rem; /* 840px */
+	}
+}
