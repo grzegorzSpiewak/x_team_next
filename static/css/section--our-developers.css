@@ -59,7 +59,8 @@
 
 	/* Our Developers page - We are disciplined */
 	.section--disciplined {
-		background: #130e2e url('../images/bg/x-team-disciplined-developers.jpg') no-repeat top center / cover;
+		background: #130e2e url('../images/bg/x-team-disciplined-developers.jpg') no-repeat top center;
+		background-size: cover;
 		height: 28vw;
 		display: flex;
 		align-items: center;
@@ -101,7 +102,8 @@
 	.section--battle {
 		/*padding-top: 10rem;
 		padding-bottom: 10rem;*/
-		background: #130e2e url('../images/bg/x-team-experienced-developers.jpg') no-repeat top center / cover;
+		background: #130e2e url('../images/bg/x-team-experienced-developers.jpg') no-repeat top center;
+		background-size: cover;
 		height: 28vw;
 		display: flex;
 		align-items: center;

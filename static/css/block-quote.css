@@ -1,0 +1,42 @@
+.block-quote {
+  margin: 0;
+  padding: 0;
+  color: #f63954;
+}
+
+.block-quote__text {
+  margin: 30px 0 24px;
+  text-transform: uppercase;
+  font: 300 1.625rem/1.3846 'Oswald', sans-serif;
+  position: relative;
+}
+
+.block-quote__text::before {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  top: -30px;
+  left: calc(50% - 20px);
+  background-color: #e2e3e5;
+}
+
+.block-quote__title, .block-quote__subtitle {
+  color: #5a5665;
+  font: 600 14px/1 'Open Sans',sans-serif;
+  font-size: 14px;
+}
+
+.block-quote__title {
+  margin-bottom: 5px;
+}
+
+.block-quote__subtitle {
+  opacity: .5;
+}
+
+@media screen and (min-width: 1024px) {
+  .block-quote__text::before {
+    left: 0;
+  }
+}

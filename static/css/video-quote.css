@@ -1,0 +1,110 @@
+.video-quote {
+	display: flex;
+	flex-direction: column;
+	padding: 2rem 0;
+	position: relative;
+	text-align: center;
+}
+.video-quote__logo {
+	max-width: 112px;
+}
+.video-quote__title {
+	position: relative;
+  font: 800 2rem/1 'Open Sans', sans-serif; /* 35px */
+  text-transform: uppercase;
+  color: #34323b;
+  margin-bottom: 5rem; /* 80px */
+}
+.video-quote__title::after {
+	content: '';
+	position: absolute;
+	width: 2.5rem; /* 40px */
+	height: 2px;
+	bottom: -2.5rem; /* 40px */
+	left: calc(50% - 1.125rem);
+	background-color: #f63954;
+}
+.video-quote__text {
+	font-size: 1.25rem; /* 20px */
+	line-height: 1.875rem; /* 30px */
+	color: #5a5665;
+	max-width: 25rem;
+	margin: 0 auto 2rem;
+	padding: 0 2rem;
+}
+.video-quote__pic {
+	position: relative;
+}
+.video-quote__pic__img {
+	max-width: 100%;
+	max-height: 700px;
+	opacity: 1;
+	transition: all .3s ease-in;
+}
+.video-quote__pic__img[data-src] {
+	opacity: 0;
+}
+.video-quote__link {
+	position: absolute;
+	left: calc(50% - 45px);
+	top: calc(50% - 20px);
+}
+@media screen and (max-width: 1023px) {
+	.video-quote__pic {order: 1; margin-bottom: 2rem;}
+	.video-quote__body {order: 2;}
+	.video-quote__pic__img {width: 80%;}
+}
+@media screen and (min-width: 1024px) {
+	.video-quote {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-direction: row;
+		max-width: 100%;
+		overflow-x: hidden;
+		text-align: left;
+		padding: 3rem calc(50% - 480px);
+	}
+	.video-quote__title {
+		font-size: 2.25rem;
+	}
+	.video-quote__link {
+		left: calc(50% - 62px);
+		top: calc(50% - 42px);
+	}
+	.video-quote__title::after {
+		left: 0;
+	}
+	.video-quote__text {
+		font-size: 1.375rem; /* 22px */
+		line-height: 2.25rem; /* 36px */
+		max-width: 25rem;
+		margin: 0;
+		padding: 0;
+	}
+	.video-quote__body {
+		width: 50%;
+	}
+	.video-quote__pic {
+		width: 70%;
+		margin-right: -20%;
+	}
+	.video-quote__link {
+		left: -62px;
+	}
+}
+@media screen and (min-width: 1116px) {
+	.video-quote {
+		padding: 6rem calc(50% - 500px);
+	}
+}
+@media screen and (min-width: 1190px) {
+	.video-quote {
+		padding: 6rem calc(50% - 544px);
+	}
+}
+@media screen and (min-width: 1400px) {
+	.video-quote {
+		padding: 6rem calc(50% - 608px);
+	}
+}

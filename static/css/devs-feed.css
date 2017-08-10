@@ -1,0 +1,203 @@
+.devsfeed {
+	text-align: center;
+}
+.devsfeed__title {
+	position: absolute;
+	margin-top: 2.6em;
+	width: 100%;
+	font: 800 2.625rem/.8 'Open Sans', sans-serif; /* 42px */
+	letter-spacing: -3px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+	text-shadow: 0 0 3px rgba(0,0,0,.1);
+}
+
+.devsfeed__item__list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.devsfeed__item__pic {
+	width: 100%;
+}
+
+.devsfeed__item__pic__img {
+	max-width: 100%;
+	opacity: 1;
+	transition: all .3s ease-in;
+}
+
+.devsfeed__item__pic__img[data-src] {
+	opacity: 0;
+}
+.devsfeed__item__icon__img {
+	width: 100%;
+}
+.devsfeed__item__title {
+	font: bold 1.25rem/1 'Source Sans Pro', sans-serif; /* 20px */
+	text-transform: uppercase;
+	margin: 2rem 0 .4em 0;
+}
+.devsfeed__item__text {
+	text-align: center;
+	font-size: 1.125rem; /* 18px */
+	line-height: 1.375rem; /* 22px */
+}
+
+/* Developers Links */
+.devsfeed__item__link {
+	text-decoration: none;
+	color: #34323b;
+	position: relative;
+}
+a[href="#"] {
+  pointer-events: none;
+}
+.devsfeed__item__link::before, .devsfeed__item__link::after {
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: -3px;
+	width: 0;
+	height: 1px;
+	transition: all .2s ease-out;
+	background-color: #ff5965;
+}
+.devsfeed__item__link::before {left: 50%;}
+.devsfeed__item__link::after {right: 50%;}
+.devsfeed__item__link:hover::before {
+	left: 1px;
+	width: 50%;
+}
+.devsfeed__item__link:hover::after {
+	right: 1px;
+	width: 50%;
+}
+
+/* Icons */
+.devsfeed__item__icon__wrap {
+	height: 30px;
+	margin: 2em auto 0;
+}
+.devsfeed__item__icon {
+	display: inline-block;
+	vertical-align: top;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 100%;
+}
+.devsfeed__item__icon--people {
+	width: 34px;
+	height: 22px;
+	background-image: url('../images/icons/people.png');
+}
+.devsfeed__item__icon--contract {
+	width: 25px;
+	height: 25px;
+	background-image: url('../images/icons/contract.png');
+}
+.devsfeed__item__icon--graph {
+	width: 30px;
+	height: 20px;
+	background-image: url('../images/icons/graph.png');
+}
+.devsfeed__item__icon--rocket {
+	width: 19px;
+	height: 24px;
+	background-image: url('../images/icons/rocket.png');
+}
+.devsfeed__item__icon--world {
+	width: 24px;
+	height: 24px;
+	background-image: url('../images/icons/world.png');
+}
+.devsfeed__item__icon--vr-goggles {
+	width: 26px;
+	height: 19px;
+	background-image: url('../images/icons/vr-goggles.png');
+}
+
+@media screen and (max-width: 1023px) {
+	.devsfeed {
+		padding: 3.5rem 0; /* 40px */
+	}
+	.devsfeed__item:not(:first-child) .devsfeed__item__pic {
+		display: none;
+	}
+	.devsfeed__item__pic {
+		height: 220px;
+		overflow: hidden;
+	}
+	.devsfeed__item__pic__img {
+		margin-top: -60px;
+	}
+	.devsfeed__item__text {
+		max-width: 400px;
+		margin: auto;
+	}
+}
+@media screen and (min-width: 1024px) {
+	.devsfeed__title {
+		font-size: 5.5rem;
+		letter-spacing: -4px;
+		margin-top: 1.8em;
+	}
+	.devsfeed__items {
+		display: flex;
+		justify-content: center;
+	}
+	.devsfeed__item {
+		flex-grow: 1;
+		width: 30%;
+		max-width: 400px;
+		text-align: center;
+	}
+	.devsfeed__item:nth-child(2) {margin: 0 3%;}
+	.devsfeed__item__title {
+		font-size: 1.5rem;
+		line-height: 1.6rem;
+	}
+	.devsfeed__item__text {
+		font-size: 1.3rem;
+		line-height: 1.2;
+	}
+	/* Icons */
+	.devsfeed__item__icon__wrap {
+		height: 50px;
+	}
+	.devsfeed__item__icon--people {
+		width: 44px;
+		height: 28px;
+	}
+	.devsfeed__item__icon--contract {
+		width: 35px;
+		height: 35px;
+	}
+	.devsfeed__item__icon--graph {
+		width: 40px;
+		height: 26px;
+	}
+	.devsfeed__item__icon--rocket {
+		width: 32px;
+		height: 40px;
+	}
+	.devsfeed__item__icon--world {
+		width: 40px;
+		height: 40px;
+	}
+	.devsfeed__item__icon--vr-goggles {
+		width: 46px;
+		height: 33px;
+	}
+}
+@media screen and (min-width: 1280px) {
+	.devsfeed__title {
+		font-size: 6rem;
+		letter-spacing: -5px;
+	}
+	.devsfeed__item__title {
+		font-size: 1.6rem;
+		line-height: 1.8rem;
+	}
+}

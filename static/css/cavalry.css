@@ -1,198 +1,99 @@
 .cavalry {
-	background-color: #f3f2f6;
-	text-align: center;
+	padding: 5rem 0 5rem;
+	background-color: #fff;
 }
 .cavalry__title {
-	position: absolute;
-	margin-top: 2.6em;
-	width: 100%;
-	font: 800 2.625rem/.8 'Open Sans', sans-serif; /* 42px */
-	letter-spacing: -3px;
-	text-align: center;
-	text-transform: uppercase;
-	color: #fff;
-	text-shadow: 0 0 3px rgba(0,0,0,.1);
-}
-
-.cavalry__item__list {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-.cavalry__item__pic {
-	width: 100%;
-}
-
-.cavalry__item__pic__img {
-	max-width: 100%;
-}
-.cavalry__item__icon__img {
-	width: 100%;
-}
-.cavalry__item__title {
-	font: bold 1.25rem/1 'Source Sans Pro', sans-serif; /* 20px */
-	text-transform: uppercase;
-	margin-bottom: .4em;
-}
-.cavalry__item__text {
-	text-align: center;
-	font-size: 1.125rem; /* 18px */
-	line-height: 1.375rem; /* 22px */
-}
-
-/* Developers Links */
-.cavalry__item__link {
-	text-decoration: none;
-	color: #ff5965;
 	position: relative;
+  font: 800 2rem/1 'Open Sans',sans-serif; /* 35px */
+  text-align: center;
+  text-transform: uppercase;
+  color: #34323b;
+  margin: 0 auto 5rem; /* 80px */
+  letter-spacing: -1px;
 }
-a[href="#"] {
-  pointer-events: none;
-}
-.cavalry__item__link::before, .cavalry__item__link::after {
+.cavalry__title::after {
 	content: '';
-	display: block;
 	position: absolute;
-	bottom: -3px;
-	width: 0;
-	height: 1px;
-	transition: all .2s ease-out;
-	background-color: #ff5965;
+	width: 2.5rem; /* 40px */
+	height: 2px;
+	bottom: -2.5rem; /* 40px */
+	left: calc(50% - 1.25rem); /* 20px */
+	background-color: #f63954;
 }
-.cavalry__item__link::before {left: 50%;}
-.cavalry__item__link::after {right: 50%;}
-.cavalry__item__link:hover::before {
-	left: 1px;
-	width: 50%;
+.cavalry__intro {
+	font-size: 1.25rem; /* 20px */
+	line-height: 1.875rem; /* 30px */
+	color: #5a5665;
+	text-align: center;
 }
-.cavalry__item__link:hover::after {
-	right: 1px;
-	width: 50%;
-}
-
-/* Icons */
-.cavalry__item__icon__wrap {
-	height: 30px;
-	margin: 2em auto 0;
-}
-.cavalry__item__icon {
-	display: inline-block;
-	vertical-align: top;
-	background-repeat: no-repeat;
-	background-position: center top;
-	background-size: 100%;
-}
-.cavalry__item__icon--people {
-	width: 34px;
-	height: 22px;
-	background-image: url('../images/icons/people.png');
-}
-.cavalry__item__icon--contract {
-	width: 25px;
-	height: 25px;
-	background-image: url('../images/icons/contract.png');
-}
-.cavalry__item__icon--graph {
-	width: 30px;
-	height: 20px;
-	background-image: url('../images/icons/graph.png');
-}
-.cavalry__item__icon--rocket {
-	width: 19px;
-	height: 24px;
-	background-image: url('../images/icons/rocket.png');
-}
-.cavalry__item__icon--world {
-	width: 24px;
-	height: 24px;
-	background-image: url('../images/icons/world.png');
-}
-.cavalry__item__icon--vr-goggles {
-	width: 26px;
-	height: 19px;
-	background-image: url('../images/icons/vr-goggles.png');
+.cavalry__brands {
+	max-width: 1068px;
+	margin: 2rem auto;
 }
 
-@media screen and (max-width: 1023px) {
-	.cavalry {
-		padding: 2.5rem 0; /* 40px */
-	}
-	.cavalry__item:not(:first-child) .cavalry__item__pic {
-		display: none;
-	}
-	.cavalry__item__pic {
-		height: 220px;
-		overflow: hidden;
-	}
-	.cavalry__item__pic__img {
-		margin-top: -60px;
-	}
-	.cavalry__item__text {
-		max-width: 400px;
-		margin: auto;
+/* CTAs */
+.cavalry__actions {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 2rem;
+}
+.cavalry__action {
+	display: block;
+	background-color: #fff;
+	margin: 1rem 20px;
+	text-decoration: none;
+	text-align: center;
+	line-height: 1;
+	padding: 1px 1px 1rem;
+	transition: box-shadow .3s ease-out;
+}
+.cavalry__action:hover {
+	box-shadow: 0 0 20px rgba(0,0,0,.15);
+}
+.cavalry__action__img {
+	max-width: 100%;
+	opacity: 1;
+	transition: all .3s ease-in;
+}
+.cavalry__action__img[data-src] {
+	opacity: 0;
+}
+.cavalry__action__title {
+	display: block;
+	font-weight: 800;
+	font-size: 1.5rem; /* 24px */
+	text-transform: uppercase;
+	color: #34323b;
+	margin: 1.5rem auto .5rem;
+}
+.cavalry__action__learn {
+	display: block;
+	font-size: 20px;
+	color: #f63954;
+}
+
+@media screen and (min-width:560px) and (max-width: 1023px) {
+	.cavalry__intro {
+		margin-left: auto;
+		margin-right: auto;
+		width: 61%;
 	}
 }
 @media screen and (min-width: 1024px) {
 	.cavalry__title {
-		font-size: 5.5rem;
-		letter-spacing: -4px;
-		margin-top: 1.8em;
+		font-size: 2.25rem;
 	}
-	.cavalry__items {
-		display: flex;
-		justify-content: center;
+	/* CTAs */
+	.cavalry__actions {
+		flex-direction: row;
+		margin-bottom: 5rem;
 	}
-	.cavalry__item {
-		flex-grow: 1;
-		width: 30%;
-		max-width: 400px;
-		text-align: center;
-	}
-	.cavalry__item:nth-child(2) {margin: 0 3%;}
-	.cavalry__item__title {
-		font-size: 1.5rem;
-		line-height: 1.6rem;
-	}
-	.cavalry__item__text {
-		font-size: 1.3rem;
-		line-height: 1.2;
-	}
-	/* Icons */
-	.cavalry__item__icon__wrap {
-		height: 50px;
-	}
-	.cavalry__item__icon--people {
-		width: 44px;
-		height: 28px;
-	}
-	.cavalry__item__icon--contract {
-		width: 35px;
-		height: 35px;
-	}
-	.cavalry__item__icon--graph {
-		width: 40px;
-		height: 26px;
-	}
-	.cavalry__item__icon--rocket {
-		width: 32px;
-		height: 40px;
-	}
-	.cavalry__item__icon--world {
-		width: 40px;
-		height: 40px;
-	}
-	.cavalry__item__icon--vr-goggles {
-		width: 46px;
-		height: 33px;
-	}
-}
-@media screen and (min-width: 1280px) {
-	.cavalry__title {
-		font-size: 6rem;
-		letter-spacing: -5px;
-	}
-	.cavalry__item__title {
-		font-size: 1.6rem;
-		line-height: 1.8rem;
+	.cavalry__action {
+		width: 50%;
+		max-width: 510px;
+		margin: 2rem 20px;
+		padding: 1px 1px 2rem;
 	}
 }

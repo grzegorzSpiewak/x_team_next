@@ -1,0 +1,110 @@
+.resources-tutorials {
+	padding: 8rem 0;
+	background-color: #f8f8fa;
+}
+.resources-tutorials__title {
+	position: relative;
+  font: 800 2rem/1 'Open Sans', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  color: #34323b;
+  margin: 0 auto 5rem;
+  letter-spacing: -1px;
+}
+.resources-tutorials__title::after {
+  content: '';
+  position: absolute;
+  width: 2.5rem;
+  height: 2px;
+  bottom: -2.5rem;
+  left: calc(50% - 1.25rem);
+  background-color: #f63954;
+}
+.resources-tutorials__intro {
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  color: #5a5665;
+  text-align: center;
+}
+.resources-tutorials__grid {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	flex-wrap: wrap;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.resources-tutorials__item {
+  display: flex;
+  align-items: center;
+	margin-top: 3rem;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0,0,0,.05);
+  transition: box-shadow .2s ease-out;
+}
+.resources-tutorials__item:hover {
+  box-shadow: 0 0 20px rgba(0,0,0,.15);
+}
+.resources-tutorials__link {
+	text-decoration: none;
+	display: block;
+	position: relative;
+  padding: 2.5rem; /* 40px */
+  min-width: calc(100% - 5rem);
+  min-height: calc(100% - 5rem);
+}
+.resources-tutorials__link:after {
+	display: block;
+	position: absolute;
+	content: '⟶';
+	top: 2.5rem;
+	right: 2.5rem;
+	color: #34323b;
+	font-size: 1.25rem;
+}
+.resources-tutorials__tag {
+	font: 800 .875rem 'Open Sans', sans-serif; /* 14px */
+	text-transform: uppercase;
+	color: #f63954;
+}
+.resources-tutorials__article-title {
+	display: block;
+	font: 800 1.5rem 'Open Sans', sans-serif; /* 24px */
+	text-transform: uppercase;
+	color: #34323b;
+	margin-top: 3.75rem; /* 60px */
+	margin-bottom: .75rem;
+}
+.resources-tutorials__snippet {
+	font-size: 1.25rem; /* 20px */
+	line-height: 2rem; /* 34px */
+	color: #5a5665;
+	min-height: 5em;
+}
+
+@media screen and (min-width: 800px) {
+	.resources-tutorials__grid {
+		flex-direction: row;
+		justify-content: flex-start;
+	}
+	.resources-tutorials__item {
+		width: 48%;
+	}
+}
+@media screen and (min-width: 800px) and (max-width: 1279px) {
+	.resources-tutorials__item:nth-child(odd) {
+		margin-right: 4%;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.resources-tutorials__item {
+		width: 32%;
+		margin-right: 2%;
+	}
+	.resources-tutorials__item:nth-child(3n) {
+		margin-right: 0;
+	}
+}

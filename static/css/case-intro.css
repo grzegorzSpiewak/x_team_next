@@ -1,9 +1,8 @@
 .case {
-	padding: 3rem 0;
-	background-color: #e8e6ed;
+	background-color: #f4f4f7;
 	color: #5a5665;
 	font-size: 1.125rem; /* 18px */
-	text-align: center;
+	align-items: flex-start;
 }
 .case .wrap {
 	max-width: 52.5rem; /* 840px */
@@ -30,9 +29,13 @@
 }
 .case__item {
 	margin: 0 auto 2rem;
+	padding: 0 1rem;
 }
 .case__item:last-child {
 	margin-bottom: 0;
+}
+.case__item:first-child {
+	margin-left: 0;
 }
 .case__item__label {
 	display: block;
@@ -41,15 +44,8 @@
 	color: #3d3b4f;
 }
 
-@media screen and (min-width: 512px) {
-	.case__item {
-		display: inline-block;
-		margin: 0 2rem;
-	}
-}
 @media screen and (min-width: 1024px) {
 	.case {
-		padding: 6rem 0;
 		font-size: 1.5rem;
 	}
 	.case__logo {
@@ -58,18 +54,23 @@
 		max-height: 5rem;
 	}
 	.case__item {
+		padding: 0;
+		display: inline-block;
+		vertical-align: top;
 		width: auto;
-		margin: 0 5rem;
+		margin-left: 5rem;
 		font-size: 1.25rem; /* 20px */
-		line-height: 2.5rem; /* 40px; */
+		line-height: 2.125rem;
 	}
 	.case__item__label {
 		font-size: 1.5rem; /* 24px */
-	}	
+	}
 }
 @media screen and (min-width: 1280px) {
 	.case {
-		padding: 10rem 0;
 		font-size: 1.625rem; /* 26px */
+	}
+	.case__item {
+		margin-left: 8rem;
 	}
 }

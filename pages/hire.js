@@ -8,7 +8,6 @@ import Cavalry from '../components/Cavalry'
 import DevsFed from '../components/DevsFed'
 import Footer from '../components/Footer'
 import Head from '../components/HeadHire'
-import Herobrands from '../components/Herobrands'
 import LandingCta from '../components/LandingCta'
 import Menu from '../components/Menu'
 import RelSkills from '../components/RelSkills'
@@ -41,7 +40,7 @@ export default class extends React.Component {
               PageData.TextLanding.hasText ? <TextLanding { ...PageData.TextLanding } /> : null
             }
             <Menu { ...Homepage.Menu } />
-            <Herobrands { ...PageData.Hero } />
+    
             <Video { ...Homepage.Video } />
             {
               PageData.DevsFed.hasFed ? <DevsFed { ...PageData.DevsFed } /> : <Cavalry { ...Homepage.Cavalry } />

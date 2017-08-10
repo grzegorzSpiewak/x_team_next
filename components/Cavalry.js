@@ -1,30 +1,27 @@
 'use strict'
 import React from 'react'
 import Config from '../config'
+import Link from 'next/link'
 
 const renderItems = (items) => {
-  return items.map((item) =>
-    <article className="cavalry__item" key={ item.title }>
-      <ul className="cavalry__item__list">
-        <li className="cavalry__item__pic">
-          <img src={ `../static/images/${item.pic}` } alt="" className="cavalry__item__pic__img" />
-        </li>
-        <li className="cavalry__item__icon__wrap">
-          <span className={ `cavalry__item__icon cavalry__item__icon--${item.icon}` }></span>
-        </li>
-        <li className="cavalry__item__title">{ item.title }</li>
-        <li className="cavalry__item__text" dangerouslySetInnerHTML={ {__html: item.text} } />
-      </ul>
-    </article>
+  return items.map((item, i) =>
+   <Link href={ `${item.href}` } key={i}>
+      <a href={ item.href } className="cavalry__action">
+        <img src={ item.img } alt={ item.alt } className="cavalry__action__img" />
+        <span className="cavalry__action__title" dangerouslySetInnerHTML={ {__html: item.title} } />
+        <span className="cavalry__action__learn" dangerouslySetInnerHTML={ {__html: item.learn} } />
+      </a>
+    </Link>
   )
 }
 
 const Cavalry = (props) => (
-  <section className="block cavalry">
+  <section className="cavalry">
     <div className="wrap">
-      <h2 className="cavalry__title" dangerouslySetInnerHTML={ {__html: props.title} } />
-      <div className="cavalry__items">
-        { renderItems(props.items) }
+      <h2 className="cavalry__title" dangerouslySetInnerHTML={ {__html: props.title} }/>
+      <p className="cavalry__intro" dangerouslySetInnerHTML={ {__html: props.intro} }/>
+      <div className="cavalry__actions">
+        {renderItems(props.actions)}
       </div>
     </div>
   </section>

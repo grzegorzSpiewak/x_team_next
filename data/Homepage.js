@@ -20,24 +20,24 @@ const Homepage = {
         anchor: 'Hire X-Team',
         title: 'Hire X-Team',
         big: false,
-        style: ''
-    }
+        style: 'red'
+    },
+    currentPage: 'home',
+    whiteOnMobile: true,
+    landing: false,
   },
 
   Hero: {
     title: "Keep<br />Moving<br><i>Forward.</i>",
-    caption: "Motivated developers, ready to join your team.",
-    layout: "centered",
-    style: "home",
-    buttons: [
-      {
-        href: 'https://www.youtube.com/watch?v=P5oVuk5M50s',
-        anchor: 'Watch Video',
-        title: 'Watch Video',
-        overlay: true,
-        big: true
-      }
-    ]
+    caption: 'Motivated developers, <br class="br--mobile">ready to join your team.',
+    align: 'center',
+    buttons: [{
+      href: 'https://www.youtube.com/watch?v=P5oVuk5M50s',
+      anchor: 'Watch Video',
+      title: 'Watch Video',
+      overlay: true,
+      big: true
+    }]
   },
 
   Video: {
@@ -47,18 +47,34 @@ const Homepage = {
   },
 
   Cavalry: {
-    title: "We are your<br>cavalry.",
-    items: [
-      {pic: "dev1.jpg", icon: "people", title: "We'll join your team.", text: "You manage the projects, and our trusted developers join your team full-time."},
-      {pic: "dev2.jpg", icon: "contract", title: "Simple, flexible contract.", text: "Scale your team as needed.<br>We bill on a monthly basis."},
-      {pic: "dev3.jpg", icon: "graph", title: "We support their growth.", text: "We fund every developer's learning and growth to keep them motivated."}
+    title: "We are your cavalry.",
+    intro: 'Since 2006, the world’s leading brands have turned <br class="br--desktop"> to X-Team to help them scale their  development teams.',
+    actions: [
+      {
+        href: "/hire-developers/",
+        img: "static/images/pics/hire-developers-1.jpg",
+        alt: "Developers-working",
+        title: "Hire Developers",
+        learn: "Learn more",
+      },
+      {
+        href: "/join/",
+        img: "static/images/pics/join-x-team.jpg",
+        alt: "Developers-standing",
+        title: "Work for X-Team",
+        learn: "Learn more",
+      }
     ]
   },
 
-  VideoFilter: {
-    title: "The right team",
-    subtitle: "Kaplan Inc. explains why they chose X-Team.",
-    link: "https://www.youtube.com/watch?v=CWvmUmC9Dpk",
+  Intro: {
+    pic: 'pics/remote-developers.jpg',
+    align: 'left',
+    items: [
+      {title: "We'll join your team.", text: "You manage the projects, and our trusted developers join your team full-time."},
+      {title: "Simple, flexible contract.", text: "Scale your team as needed. We bill on a monthly basis."},
+      {title: "We support their growth.", text: "We fund every developer's learning and growth to keep them motivated."}
+    ],
   },
 
   VideoQuote: {
@@ -70,94 +86,54 @@ const Homepage = {
     link: "https://www.youtube.com/watch?v=CWvmUmC9Dpk"
   },
 
-  CheckList: {
-    style: 'dark',
-    align: 'left',
-    title: 'Our <br class="br--desktop">Partner <br>Benefits.',
-    itemsTitle: "You'll get...",
+  Benefits: {
+    title: 'Our Partner Benefits.',
+    text: "We’ve built partnerships with leading brands that have lasted nearly a decade thanks to level of care & attention we provide.",
     items: [
-      {text: "A full-time, scaleable team of trusted developers."},
-      {text: "In-depth, daily progress updates (without asking for them). We can also join daily stand-ups."},
-      {text: "Dedicated account manager, available any time."},
-      {text: "Flexible contracts with simple monthly billing."}
+      {icon: 'team', title: 'Dedicated Team.', text: "A full-time, scaleable team of trusted developers."},
+      {icon: 'updates', title: 'Daily Updates.', text: "In-depth, daily progress updates. (Before you even ask for them)"},
+      {icon: 'manager', title: 'Account Manager.', text: "Dedicated account manager, available any time."},
+      {icon: 'contract', title: 'Flexible Contract.', text: "Flexible contracts with simple monthly billing."}
     ]
   },
 
   Hire10Years: {
     title: "10 years in<br>the making.",
     text: "We train our developers based on our decade’s worth of  knowledge and experience around proactive communication.",
-    theme: 'light',
     align: 'right',
-    style: 'cutout',
-    image: 'dev1',
-    ctaHref: '/hire-developers',
+    pic: 'pics/10-years-in-the-making.jpg',
+    ctaHref: '/hire-developers/',
     ctaAnchor: 'Hire X-Team',
     ctaTitle: 'Hire X-Team',
-    ctaStyle: 'dark'
+    ctaStyle: 'red'
   },
 
-  NeverStop: {
-    title: "Never Stop<br>Learning.",
+  MotivatedDevs: {
+    title: "Motivated<br class='br--desktop'> Developers.",
     text: "We invest in learning and growth for our developers. This helps them maintain their skills and build a motivated attitude that drives your projects forward.",
-    theme: 'dark',
     align: 'left',
-    style: 'cutout',
-    image: 'dev2',
-    ctaHref: '/unleash',
+    pic: 'pics/motivated-developers.jpg',
+    ctaHref: '/unleash/',
     ctaAnchor: 'Learn More',
     ctaTitle: 'Learn More',
-    ctaStyle: ''
-  },
-
-  Ordinary: {
-    title: "Ordinary<br>is not an<br>option.",
-    text: "After a decade of hiring developers, we know how separate the ordinary from the extraordinary.",
-    theme: 'light',
-    align: 'right',
-    style: 'cutout',
-    image: 'dev3',
-    ctaHref: '/our-developers',
-    ctaAnchor: 'Learn More',
-    ctaTitle: 'Learn More',
-    ctaStyle: 'dark'
-  },
-
-  Quotes: {
-    ctaHref: '/portfolio',
-    ctaAnchor: "Past Work",
-    ctaTitle: "Portfolio",
-    items: [
-      { quote: "All the X-Teamers who worked on our team brought something unique to the table and helped create a synergy that's almost impossible to find.", company: 'Danielle Chircop, Kaplan Inc.'}
-    ]
+    ctaStyle: 'red'
   },
 
   Skills: {
-    title: "Ready to assemble.",
-    subtitle: "Hire motivated developers who are driven to keep their<br>skills sharp in the most widely adopted technologies today.",
-    button: {
-      href: '/hire-developers',
-			anchor: 'Hire Developers',
-			title: 'Hire Developers',
-			big: true,
-			style: 'dark'
-    }
-  },
-
-  Hire: {
-    title: 'We<br>never<br>hold<br>back.',
-    picture: 'pic1',
-    ctaHref: '/hire-developers',
-    ctaAnchor: 'Hire X-Team',
-    ctaTitle: 'Hire X-Team',
-    ctaStyle: 'red',
-    ctaBig: true
+    title: "Ready to<br>Assemble.",
+    text: "Hire motivated developers who are driven to keep their skills sharp in the most widely adopted technologies today.",
+    align: 'skills',
+    pic: 'pics/developers-skills.png',
+    ctaHref: '/hire-developers/',
+    ctaAnchor: 'Hire Developers',
+    ctaTitle: 'Hire Developers',
+    ctaStyle: 'red'
   },
 
   Subscription: {
     title: "We'll help you unleash.",
     subtitle: "Join the 20,000 developers who subscribe to our newsletter."
   }
-
 }
 
 export default Homepage

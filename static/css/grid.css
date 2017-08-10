@@ -31,12 +31,12 @@
 	z-index: 1;
 	transition: background-color .3s ease-out;
 }
-.grid__link--x-outpost::after {background-color: rgba(83,71,99,.75);}
-.grid__link--unleash::after {background-color: rgba(39,35,52,.75);}
-.grid__link--crash-course::after {background-color: rgba(255,89,101,.75);}
-.grid__link--slack::after {background-color: rgba(39,35,52,.75);}
-.grid__link--x-academy::after {background-color: rgba(255,89,101,.75);}
-.grid__link--origins::after {background-color: rgba(83,71,99,.75);}
+.grid__link--x-outpost::after {background-color: rgba(52,50,59,.75);}
+.grid__link--unleash::after {background-color: rgba(52,50,59,.75);}
+.grid__link--crash-course::after {background-color: rgba(52,50,59,.75);}
+.grid__link--slack::after {background-color: rgba(52,50,59,.75);}
+.grid__link--x-academy::after {background-color: rgba(52,50,59,.75);}
+.grid__link--origins::after {background-color: rgba(52,50,59,.75);}
 
 
 .grid__link:hover::after {
@@ -45,6 +45,13 @@
 .grid__pic {
 	display: block;
 	width: 100%;
+	opacity: 1;
+	transition: all .3s ease-in;
+}
+.grid__pic[data-src] {
+	display: block;
+	width: 100%;
+	opacity: 0;
 }
 .grid__title {
 	position: absolute;

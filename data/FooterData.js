@@ -24,13 +24,13 @@ const Footer = {
   Hire: {
     title: "Hire Developers",
     links: [
-      { href: "/hire-react-developers", title: "React Developers" },
-      { href: "/hire-angular-developers", title: "Angular Developers" },
-      { href: "/hire-javascript-developers", title: "Javascript Developers" },
-      { href: "/hire-node-developers", title: "Node Developers" },
-      { href: "/hire-php-developers", title: "PHP Developers" },
-      { href: "/hire-laravel-developers", title: "Laravel Developers" },
-      { href: "/hire-hire-symfony-developers", title: "Symfony Developers" },
+      { href: "/hire-react-developers", title: "React Developers", id: "react" },
+      { href: "/hire-angular-developers", title: "Angular Developers", id: "angular" },
+      { href: "/hire-javascript-developers", title: "Javascript Developers", id: "javascript" },
+      { href: "/hire-node-developers", title: "Node Developers", id: "node" },
+      { href: "/hire-php-developers", title: "PHP Developers", id: "php" },
+      { href: "/hire-laravel-developers", title: "Laravel Developers", id: "laravel" },
+      { href: "/hire-hire-symfony-developers", title: "Symfony Developers", id: "symfony" },
     ],
   },
 

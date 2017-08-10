@@ -5,7 +5,7 @@ import Link from 'next/link'
 const VideoQuote = (props) => (
   <section className="video-quote">
     <div className="video-quote__body">
-      <img className="video-quote__logo" src={ `${props.image}` } alt={ `${props.alt}` }  />
+      <img className="video-quote__logo" src={ `${props.logo}` } alt={ `${props.alt}` }  />
       <h2 className="video-quote__title">{ props.title }</h2>
       <p className="video-quote__text">{ props.text }</p>
     </div>

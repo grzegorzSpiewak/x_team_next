@@ -1,13 +1,12 @@
 /* FAQ texts - markup added on page template */
-/* here we're using nested CSS instead of BEM */
 .landing-faq {
-	font-size: 1.45rem;
-	line-height: 2.4rem;
+	font-size: 1.375rem;
+	line-height: 2.25rem;
 }
 .landing-faq--no-text {display: none;}
 
 .landing-faq h2, .landing-faq h3, .landing-faq h4 {
-	font: 800 1.75rem/1.2 'Source Sans Pro', sans-serif; /* 20px */
+	font: 600 1.4rem/1.4 'Open Sans', sans-serif; /* 20px */
   margin: 3rem 0 2rem;
 }
 .landing-faq h3:first-child {
@@ -15,7 +14,6 @@
 }
 .landing-faq h2:first-child {
 	margin-top: 0;
-	text-transform: uppercase;
 }
 .landing-faq h2 {font-size: 1.8rem;}
 .landing-faq h4 {font-size: 1.15rem;}
@@ -74,9 +72,13 @@
 
 @media screen and (max-width: 512px) {
 	.landing-faq h2 {text-align: center;}
+	p { padding-right: 1rem; }
 }
 
 @media screen and (max-width: 800px) {
+	.landing-tech .landing-faq {
+		display: none;
+	}
 	/* collapse FAQ answers */
 	.landing-faq h2 {margin-bottom: 2rem; line-height: 2rem;}
 	.landing-faq h3 {

@@ -23,7 +23,13 @@
   .hire-section--pic1,
   .hire-section--pic2,
   .hire-section--pic3 {
+    background: transparent;
+  }
+  .hire-section--pic1--with-bg,
+  .hire-section--pic2--with-bg,
+  .hire-section--pic3--with-bg {
     background-image: url(../images/bg/hire-trusted-developers-small.jpg);
+    animation: fade 0.3s ease;
   }
 }
 @media screen and (min-width: 581px) and (max-width: 1023px) {
@@ -36,12 +42,21 @@
     line-height: .8;
     letter-spacing: -3px;
   }
-  .hire-section--pic1, 
+  .hire-section--pic1,
   .hire-section--pic2 {
+    background: transparent;
+  }
+  .hire-section--pic1--with-bg,
+  .hire-section--pic2--with-bg {
     background-image: url(../images/bg/hire-remote-developers-med.jpg);
+    animation: fade 0.3s ease;
   }
   .hire-section--pic3 {
+    background: transparent;
+  }
+  .hire-section--pic3--with-bg {
     background-image: url(../images/bg/hire-motivated-developers-med.jpg);
+    animation: fade 0.3s ease;
   }
 }
 
@@ -57,12 +72,21 @@
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
-  .hire-section--pic1, 
+  .hire-section--pic1,
   .hire-section--pic2 {
+    background: transparent;
+  }
+  .hire-section--pic1--with-bg,
+  .hire-section--pic2--with-bg {
     background-image: url(../images/bg/hire-remote-developers.jpg);
+    animation: fade 0.3s ease;
   }
   .hire-section--pic3 {
+    background: transparent;
+  }
+  .hire-section--pic3--with-bg {
     background-image: url(../images/bg/hire-motivated-developers.jpg);
+    animation: fade 0.3s ease;
   }
 }
 
@@ -70,11 +94,20 @@
   .hire-section__title {
     font-size: 6.5rem;
   }
-  .hire-section--pic1, 
+  .hire-section--pic1,
   .hire-section--pic2 {
+    background: transparent;
+  }
+  .hire-section--pic1--with-bg,
+  .hire-section--pic2--with-bg {
     background-image: url(../images/bg/hire-remote-developers-big.jpg);
+    animation: fade 0.3s ease;
   }
   .hire-section--pic3 {
+    background: transparent;
+  }
+  .hire-section--pic3--with-bg {
     background-image: url(../images/bg/hire-motivated-developers-big.jpg);
+    animation: fade 0.3s ease;
   }
 }

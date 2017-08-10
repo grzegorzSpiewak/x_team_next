@@ -34,10 +34,11 @@
 	height: 100%;
 	color: #fff;
 	padding-left: 10%;
-	background: #665154 url(../images/hero-unleash.jpg) no-repeat center top / cover;
+	background: #665154 url(../images/hero-unleash.jpg) no-repeat center top;
+	background-size: cover;
 }
 .hero__title--unleash {
-	font: 800 9rem/1 'Open Sans', sans-serif;
+	font: 800 10rem/1 'Open Sans', sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	margin: 0;
@@ -48,6 +49,7 @@
 	max-width: 25rem;
 	padding-left: 124px;
 	position: relative;
+	color: rgba(255,255,255,.8);
 }
 .hero__caption--unleash::before {
 	content: '';
@@ -63,15 +65,22 @@
 	align-items: center;
 	margin-left: 124px;
 }
+.hero__form__email::placeholder {
+	color: rgba(90,86,101,.7);
+}
 .hero__form__email {
-	height: 3rem;
-	width: 17em;
-	padding: 0 1em;
+	height: 3.7rem;
+	width: 20rem;
+	padding: 0 1rem;
+	font-size: 1rem;
+	color: #5a5665;
 }
 .hero__form__submit {
 	margin: 0;
 	border: 2px solid #f63954;
 	letter-spacing: 1px;
+	height: 3.95rem;
+	font-size: .875rem; /* 14px */
 }
 
 /* Section Grid */

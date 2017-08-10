@@ -10,6 +10,16 @@
 	text-decoration: none;
 	color: #272334;
 }
+.cavalry__item__pic__img {
+	max-width: 600px;
+	margin: auto;
+	height: auto;
+	opacity: 1;
+	transition: all .3s ease-in;
+}
+.cavalry__item__pic__img[data-src] {
+  opacity: 1;
+}
 @media screen and (max-width: 1023px) {
 	.cavalry__item__text--simple {
 		margin: 1rem auto 3rem;

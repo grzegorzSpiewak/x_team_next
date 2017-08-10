@@ -1,0 +1,66 @@
+.quote {
+	background-color: #fff;
+	color: #5a5665;
+	padding: 3rem 0;
+	text-align: center;
+	max-width: 80%;
+	margin: 0 auto;
+}
+.quote__title {
+  font-size: 2.25rem;
+	line-height: 1.1;
+	font-family: Oswald,sans-serif;
+	font-weight: 800;
+  text-transform: uppercase;
+  color: #34323b;
+  margin-bottom: 1.2rem;
+	letter-spacing: 1px;
+	text-align: center;
+}
+.quotes__wrap--devs {
+	position: relative;
+}
+.quote__container {
+	margin: 0 auto;
+}
+.quotes--devs .quotes__quotes--devs {
+	max-width: 100%;
+}
+.quote__cite {
+	font-size: 1.15em;
+	line-height: 1;
+	font-style: normal;
+	color: #5a5665;
+}
+.quote__symbol {
+	color: #f73954;
+	font-size: 3rem;
+	font-weight: bold;
+	margin: 0;
+	height: 1.4rem;
+}
+
+@media screen and (min-width: 800px) {
+	.quote {
+		padding: 3rem calc(50% - 400px);
+	}
+}
+@media screen and (min-width: 1024px) {
+	.quote {
+		display: flex;
+		padding: 10rem calc(50% - 480px);
+	}
+	.quote__wrap {
+		width: 85%;
+	}
+}
+@media screen and (min-width: 1116px) {
+	.quote {
+		padding: 10rem calc(50% - 544px);
+	}
+}
+@media screen and (min-width: 1280px) {
+	.quote {
+		padding: 10rem calc(50% - 608px);
+	}
+}

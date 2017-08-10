@@ -7,8 +7,8 @@
 }
 
 @media screen and (max-width: 1023px) {
-	.section--dev1, 
-	.section--dev2, 
+	.section--dev1,
+	.section--dev2,
 	.section--dev3 {display: none;}
 	.section--dev1-right, .section--dev4 {
 		padding: 0 1rem 3rem;
@@ -116,7 +116,7 @@
 		width: 38%;
 	    margin-left: calc(600px - 38%);
 	}
-	
+
 	/* Ryan styles */
 	.section--join-app .section__body, .section--hire .section__body {
 		margin-left: 5%;
@@ -128,7 +128,7 @@
 		min-width: 28%;
 	    max-height: 80%;
 	    background-size: contain;
-	}	
+	}
 }
 @media screen and (min-width: 1400px) {
 	.section__image--hire {

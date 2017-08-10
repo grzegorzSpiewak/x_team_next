@@ -6,11 +6,11 @@
   display: block;
   content: "Related Skills";
   position: absolute;
-  font: 800 3rem/.8 'Open Sans',sans-serif;
+  font: 800 2rem/.8 'Open Sans',sans-serif;
   text-transform: uppercase;
-  letter-spacing: -2px;
-  color: #272334;
-  left: calc(50% - 180px);
+  letter-spacing: -1px;
+  color: #34323b;
+  left: calc(50% - 120px);
   top: -6rem;
 }
 .rel-skills__row {
@@ -18,7 +18,7 @@
 }
 .rel-skills__col {
 	margin-bottom: 1rem;
-}	
+}
 .rel-skills__link {
 	color: #272334;
 	text-decoration: none;
@@ -62,10 +62,10 @@
 	}
 	.rel-skills__col {
 		width: 30%;
-	}	
+	}
 }
 @media screen and (min-width: 800px) {
 	.rel-skills__col {
 		width: 20%;
-	}	
+	}
 }

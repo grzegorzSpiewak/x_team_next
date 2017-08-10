@@ -5,19 +5,20 @@
 	.subscription {
 		text-align: center;
 		padding: 8rem 0;
-		background-color: #fff;
+		background-color: #f1f1f5;
+		margin-top: 5rem;
 	}
 	.subscription__title {
-		font-size: 2rem; /* 32px */
+		font-weight: 800;
+		font-size: 2.1875rem; /* 35px */
 		text-transform: uppercase;
-		color: #ff5964;
+		color: #34323b;
 		margin: 0;
-		letter-spacing: -1px;
 	}
 	.subscription__subtitle {
-		font-size: 1.625rem; /* 26px */
-		color: #5a5665;
-		margin: 0;
+		font-size: 1.375rem; /* 22px */
+		color: #6e6d72;
+		margin: .75rem auto 2.75rem;
 	}
 	.subscription__form {
 		display: flex;
@@ -25,32 +26,35 @@
 		margin-top: 2rem;
 	}
 	.subscription__form__email {
-		background-color: #f5f4f7;
+		font-size: 1.125rem; /* 18px */
 		text-align: left;
-		width: 280px;
-		height: 53px;
-		padding: 0 1em;
+		width: 34rem;
+		height: 3.75rem; /* 60px */
+		padding: 0 2em;
+		margin-right: 1.5rem;
 		border: none;
+		background-color: #fff;
+		color: #6e6d72;
+		box-shadow: 0 10px 10px rgba(200,200,200,.2);
 	}
 	.subscription__form__email:focus {
 		outline-color: #ff5964;
 	}
 	.subscription__form__email::placeholder {
-		color: #5a5665;
+		color: #737373;
 	}
 	.subscription__form__submit {
-		font: bold 1rem Raleway, sans-serif; /* 16px */
+		font: 400 .875rem/3.7rem 'Montserrat', sans-serif; /* 14px/60px */
 		text-transform: uppercase;
-		width: 142px;
-		height: 53px;
+		width: 11rem;
+		height: 3.75rem; /* 60px */
 		border: none;
 		color: #fff;
-		background-color: #ff5964;
-		border-radius: 2px;
+		background-color: #f63954;
 		transition: background-color .3s ease-out;
 	}
 	.subscription__form__submit:hover {
-		background-color: #ff727b;
+		background-color: #ff5964;
 	}
 
 	/* Join page */

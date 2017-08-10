@@ -2,9 +2,9 @@
 import React from 'react'
 
 const Video = (props) => (
-  <div className="hero-section__bg">
+  <div className="hero__bg">
 	  <iframe
-      className="hero-section__bg__video"
+      className="hero__bg__video"
       src={ props.link }
       allowFullScreen>
     </iframe>

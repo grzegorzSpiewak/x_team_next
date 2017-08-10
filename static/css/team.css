@@ -18,6 +18,11 @@
 	display: block;
 	max-width: 100%;
 	margin: auto;
+	opacity: 1;
+	transition: all .3s ease-in;
+}
+.team__pic[data-src] {
+	opacity: 0;
 }
 .team__name {
 	display: block;
@@ -41,6 +46,9 @@
 	line-height: 1.5;
 }
 @media screen and (min-width: 1024px) {
+	.team {
+			margin-top: 8rem;
+	}
 	.team__item {
 		text-align: left;
 		font-size: 1.25rem;
@@ -59,11 +67,17 @@
 	.team__desc {
 		font-size: 1.425rem;
 		line-height: 2.2875rem;
+		max-width: 100%;
 	}
 }
 @media screen and (min-width: 1280px) {
 	.team__item {
 		font-size: 1.75rem; /* 28px */
 		margin: 6rem auto;
+	}
+	.team__pic {
+		float: left;
+		margin-right: 2em;
+		width: 33%;
 	}
 }

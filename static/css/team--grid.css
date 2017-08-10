@@ -13,6 +13,11 @@
 .team--grid__pic {
 	display: block;
 	max-width: 100%;
+	opacity: 1;
+	transition: all .3s ease-in;
+}
+.team--grid__pic[data-src] {
+	opacity: 0;
 }
 .team--grid__name {
 	display: block;

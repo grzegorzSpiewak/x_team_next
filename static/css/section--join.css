@@ -10,29 +10,7 @@
 	overflow: visible;
 }
 
-@media screen and (max-width: 1023px) {
-	.section--comics {
-		padding: 0 5% 3rem;
-	}
-}
 @media screen and (min-width: 1024px) {
-	/* Join page - Comics */
-	.section--comics {
-		padding-top: 8rem;
-		padding-bottom: 8rem;
-		overflow: hidden;
-		background: #130e2e url('../images/bg/x-team-comics.png') no-repeat 110% center;
-		background-size: auto 100%;
-	}
-	.section__copy--comics {
-		max-width: 90%;
-	}
-	.section__image--comics {
-		position: absolute;
-		top: 0;
-		right: 0;
-		height: 100%;
-	}
 	/* Join page - Unleash Potential */
 	.section--unleash_potential .section__body {padding-right: 3rem}
 

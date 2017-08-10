@@ -22,7 +22,7 @@ class Menu extends React.Component {
     return items.map((item) =>
       <li className="menu__item" role="menuitem" key={ `${item.title}` }>
         <Link href={ `${item.href}` }>
-          <a title={`${item.title}`} className={ cx('menu__link', {'menu__link--current': item.currentPage}) }>
+          <a title={`${item.title}`} className={ `${item.currentPage === true ? 'menu__link menu__link--current' : 'menu__link' }`}>
             { item.anchor }
           </a>
         </Link>
@@ -33,7 +33,7 @@ class Menu extends React.Component {
   render() {
     return (
       <header
-        className={ `menu ${this.state.menuOpen ? 'body--menu-visible' : '' } `}
+        className={ `${this.props.landing === true ? 'menu menu--landing' : 'menu' }`}
       >
         <div
           className="wrap"
@@ -42,10 +42,10 @@ class Menu extends React.Component {
             href="/"
             className="menu__logo"
           >
-            <Logo />
+            <Logo { ...this.props }/>
           </a>
           <button
-            className="menu__toggle" onClick={ this.handleClick.bind(this) }
+            className={ `${this.props.whiteOnMobile === true ? 'menu__toggle menu__toggle--white' : 'menu__toggle'}`} onClick={ this.handleClick.bind(this) }
           >
             <span className="menu__toggle__line">menu</span></button>
           <nav

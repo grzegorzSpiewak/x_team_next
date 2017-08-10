@@ -1,7 +1,7 @@
 .unleash-feed {
-	background-color: #edecf3;
+	background-color: #f7f7f9;
 	color: #272334;
-	padding-bottom: 4rem;
+	padding: 1rem;
 }
 .unleash-feed__table__title {
 	font: 600 1rem/1.35 'Raleway', sans-serif; /* 16px */
@@ -21,13 +21,13 @@
 .unleash-feed__item {
 	font-size: 1rem; /* 16px */
 	color: #3d3b4f;
-	background-color: #f2f1f5;
-	border: 3px solid #e0dde5;
+	background-color: #ffffff;
 	border-radius: 3px;
 	padding: 1rem .75rem .75rem;
 	margin-bottom: 1rem;
 	overflow: hidden;
 	display: none;
+	box-shadow: 0 6px 18px 0 rgba(0, 0, 0, .06);
 }
 .unleash-feed__item:nth-child(1),
 .unleash-feed__item:nth-child(2),
@@ -51,8 +51,18 @@
   }
 }
 
-.unleash-feed__image, .unleash-feed__avatar__image {
+.unleash-feed__image {
 	max-width: 100%;
+}
+
+.unleash-feed__avatar__image {
+	max-width: 100%;
+	opacity: 1;
+	transition: all .3s ease-in;
+}
+
+.unleash-feed__avatar__image[data-src] {
+	opacity: 0;
 }
 .unleash-feed__avatar {
 	margin: .5rem auto;
@@ -131,6 +141,7 @@
 @media screen and (max-width: 1023px) {
 	.unleash-feed {
 		text-align: center;
+		padding-bottom: 5rem;
 	}
 	.unleash-feed__video {
 		width: 500px;
@@ -142,6 +153,9 @@
 		margin: auto;
 		max-width: 500px;
 		padding-top: 4rem;
+	}
+	.unleash-feed__description .unleash-feed__description__title {
+		padding-top: 1rem;
 	}
 	.unleash-feed__dev {
 		margin-bottom: .5rem;
@@ -157,7 +171,8 @@
 
 @media screen and (min-width: 1024px) {
 	.unleash-feed {
-		padding: 2rem 0 4rem;
+		margin-top: 4rem;
+		padding: 6rem;
 	}
 	.unleash-feed .wrap {
 		display: flex;
@@ -170,8 +185,16 @@
 		margin-right: 5%;
 	}
 	.unleash-feed__table {
-		width: 60%;
+		width: 52%;
 		margin: 0 auto;
+	}
+	.unleash-feed__description {
+		padding-top: 2rem;
+		margin-left: 6%;
+		max-width: 390px;
+	}
+	.unleash-feed__description .unleash-feed__description__title {
+		max-width: 370px;
 	}
 	.unleash-feed__item {
 		font-size: 1rem;
@@ -189,7 +212,7 @@
 }
 @media screen and (min-width: 1280px) {
 	.unleash-feed {
-		padding-bottom: 8rem;
+		padding: 8rem;
 	}
 	.unleash-feed__video {
 		width: 80%;
@@ -197,6 +220,9 @@
 		margin-right: 0;
 	}
 	.unleash-feed__table {
-		margin: 0 0 0 4.5rem; /* 72px */
+		margin: 0 4.5rem 0 0; /* 72px */
+	}
+	.unleash-feed__description {
+		margin-left: 3%;
 	}
 }

@@ -3,54 +3,42 @@
 	display: flex;
 	flex-direction: column;
 	align-items: stretch;
-	min-height: 100vh;
+	min-height: 100%;
 }
 .landing-tech .menu {
-	order: 1; 
 	flex-shrink: 1;
 }
-.landing-tech .hero-section {
-	order: 2; 
+.landing-tech .hero {
+	order: 2;
 	flex-shrink: 1;
-	max-height: 100vh;
 }
-.landing-tech .hero-section__wrap {
-	height: 55.5vw;
-	max-height: 100vh;
-}
-.landing-tech .hero-section__bg {
-	order: 3; 
+.landing-tech .hero__bg {
+	order: 3;
 	flex-shrink: 1;
-	max-height: 55.5vw;
-	height: 100vw;
 }
-.landing-tech .cavalry {
-	order: 4; 
+.landing-tech .devsfeed {
+	order: 4;
 	flex-shrink: 1;
 }
 .landing-tech .text {
-	order: 5; 
+	order: 5;
 	flex-shrink: 1;
 	width: 100%;
 }
 .landing-tech .text.unique {
-	order: 6; 
-	flex-shrink: 1; 
+	order: 6;
+	flex-shrink: 1;
 	margin: 0 auto;
 	width: 100%;
 }
 .landing-tech .text.tech-text {
-	order: 7; 
-	flex-shrink: 1; 
+	order: 7;
+	flex-shrink: 1;
 	margin: 6rem auto;
 	width: 100%;
 }
 
-@media screen and (max-width: 1024px) {
-	/* Hide mobile menu to avoid conflicts with the sticky header */
-	.landing-tech .menu__list {
-		display: none;
-	}
+@media screen and (max-width: 1023px) {
 	/* flex re-order Hero on mobile/tablets */
 	.landing-tech .hero-section {
 		position: relative;
@@ -75,16 +63,16 @@
 }
 
 /* Landing Tech devs feed */
-.cavalry--devs {
-	padding: 8rem 0;
+.devsfeed--devs {
+	padding: 3rem 0;
 }
-.cavalry--devs__subtitle {
+.devsfeed--devs__subtitle {
 	margin-bottom: 2em;
 }
-.cavalry__item__title--devs {
+.devsfeed__item__title--devs {
 	margin: 1.8rem 0;
 }
-.cavalry__cta--devs {
+.devsfeed__cta--devs {
 	margin-top: 2.5rem;
 }
 .unleash-feed__item--devs {
@@ -110,10 +98,10 @@
 .unleash-feed__item--devs:nth-child(8) {display: flex;}
 
 .unleash-feed__avatar--devs {
-	max-width: 16%;
+	max-width: 12%;
 	width: 116px;
 	height: 74px;
-	margin: 0 auto 0 0;
+	margin-left: .9rem;
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -145,7 +133,7 @@
 	.landing-faq h2 {text-align: center;}
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 799px) {
 	/* collapse FAQ answers */
 	.landing-faq h2 {margin-bottom: 2rem; line-height: 2rem;}
 	.landing-faq h3 {margin-top: 4rem;}
@@ -203,23 +191,36 @@
 
 
 @media screen and (max-width: 1023px) {
-	.cavalry--devs {
+	.devsfeed--devs {
 		padding: 4rem 0;
 	}
-	.cavalry--devs .cavalry__items {
+	.devsfeed--devs .devsfeed__items {
 		margin: auto;
     	max-width: 400px;
 	}
 	.unleash-feed__item--devs {
     	padding: .5rem 1rem;
 	}
-	.cavalry--devs .cavalry__item:not(:first-child) .cavalry__item__pic {
+	.devsfeed--devs .devsfeed__item:not(:first-child) .devsfeed__item__pic {
 	    display: block;
 	    margin-top: 2rem;
 	}
+	.devsfeed--devs__subtitle { margin: 2em auto; max-width: 34rem; }
 }
 @media screen and (min-width: 1024px) {
-	.cavalry__item--devs {
+
+	/* Sticky Header */
+	.menu--landing {
+		position: fixed;
+		box-shadow: 0 0 10px 0 rgba(0,0,0,.1)
+	}
+	/* Hero section */
+	.landing-tech .section--right {
+		padding-top: 9rem;
+	}
+
+
+	.devsfeed__item--devs {
 		max-width: 300px;
 	}
 	.landing-faq h2 {
@@ -233,5 +234,17 @@
 	.landing-faq h4 {
 		font-size: 1.5rem;
 		margin: 4rem 0 2rem;
+	}
+}
+@media screen and (max-width: 1023px) and (min-width: 600px) {
+	.landing-tech .hero__caption {
+    font-size: 1.5rem;
+    line-height: 1;
+	}
+}
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+	/* Hide Join menu option for spacing issues */
+	.menu--landing .menu__item:nth-child(2) {
+		display: none;
 	}
 }

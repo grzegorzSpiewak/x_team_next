@@ -1,0 +1,15 @@
+.full-width {
+	width: 100%;
+	margin-bottom: 3rem;
+	display: none;
+	opacity: 1;
+	transition: all .3s ease-in;
+}
+.full-width[data-src] {
+	opacity: 0;
+}
+@media screen and (min-width: 1024px) {
+	.full-width {
+		display: block;
+	}
+}

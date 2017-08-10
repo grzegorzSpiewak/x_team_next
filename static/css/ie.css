@@ -1,0 +1,51 @@
+/* IE<11 Fallback for SVG cutouts */
+
+
+/* Our Developers -> 'Motivated' section
+loads the SVG with <img> tag, that needs to be tricked */
+
+
+@media screen and (min-width: 1024px) {
+	/* Home page - 10 Years in the Making */
+	.ie .section__image--dev1 {
+		background-image: url('../images/cutouts/developers1.png');
+	}
+	/* Home page - Never Stop Learning */
+	.ie .section__image--dev2 {
+		background-image: url('../images/cutouts/developers2.png');
+	}
+	/* Home page - Ordinary is not an option */
+	.ie .section__image--dev3 {
+		background-image: url('../images/cutouts/developers3.png');
+	}
+	/* Form pages Hero */
+	.ie .section__image--join-app {
+		background-image: url('../images/cutouts/developers6.png');
+	}
+
+	.ie .section__image--hire {
+		background-image: url('../images/cutouts/trusted-developers.png');
+	}
+
+	/* Unleash page - We fund legacies */
+	.ie .section__image--dev1-right {
+		background-image: url('../images/cutouts/developers1-right.png');
+	}
+
+	/* Unleash page - We build discipline */
+	.ie .section__image--dev4 {
+		background-image: url('../images/cutouts/developers4.png');
+	}
+	
+	.ie .quotes--devs__picture {
+		background: url('../images/cutouts/developers.png') no-repeat;
+	}
+	
+}
+
+@media screen and (min-width: 1280px) {
+	.ie .quotes--devs__picture {
+		bottom: -5rem;
+		background-image: url('../images/cutouts/developers-big.png');
+	}
+}

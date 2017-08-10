@@ -1,151 +1,410 @@
 .section {
-	position: relative;
 	display: flex;
-	align-items: flex-start;
+	flex-direction: column;
+	position: relative;
+	text-align: center;
+	padding: 3rem 0;
 }
 
 /* contents */
-.section__title {
-	font: 800 2.625rem/.85 'Open Sans', sans-serif; /* 42px */
+.section__title, .section__title--logo, .section__subtitle, .section__title--hero {
 	text-transform: uppercase;
-	margin: 0;
+	color: #34323b;
 	letter-spacing: -1px;
+	position: relative;
+	font-weight: 800;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1;
 }
+
+.section__title::after, .section__title--logo span::after, .section__subtitle::after, .section__title--hero::after {
+	content: '';
+	position: absolute;
+	background-color: #f63954;
+}
+
+.section__title::after, .section__subtitle::after, .section__title--hero::after {
+	height: 2px;
+}
+
+.section__title::after, .section__title--hero::after {
+	width: 2.5rem; /* 40px */
+	left: calc(50% - 1.125rem);
+}
+
+.section__img--logo {
+	max-width: 112px;
+}
+
+.section__title {
+	font-size: 2rem;/* 35px */
+  margin-bottom: 4.2rem; /* 80px */
+}
+.section__title::after {
+	bottom: -2.5rem; /* 40px */
+}
+
+.section__subtitle {
+	font-size: 1.5rem;/* 24px */
+	margin-bottom: 3.4rem;
+}
+
+.section__subtitle::after {
+	width: 2.875rem;
+	bottom: -2rem;
+	left: 0;
+}
+
+.section__title--logo {
+	font-size: 2rem; /* mobile size, media query at the bottom of this file */
+	margin: 2rem 0;
+}
+
 .section__copy {
-	font-size: 1.125rem; /* 18px */
-	line-height: 1.5rem; /* 24px */
-	font-weight: 300;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  color: #5a5665;
+  max-width: 25rem;
+  margin: 0 auto 2rem;
+  padding: 0 1rem;
 }
 .section__copy:last-child {
 	margin-bottom: 0;
 }
-
-/* color themes */
-.section--dark {
-	background-color: #130e2e;
-	background-image: linear-gradient(to right, #0c0a2b, #261a35);
-	color: #fff;
+.section__pic {
+	margin-top: 2rem;
+	position: relative;
 }
-.section--light {
-	background-color: #edecf3;
-	color: #5a5665;
+.section__pic__img {
+	max-width: 100%;
+	max-height: 617px;
+	opacity: 1;
+	transition: opacity .3s ease-in;
 }
-.section__title--light {
-	color: #272334;
+.section__pic__img[data-src] {
+	opacity: 0;
 }
-
-.section__image__img {max-width: 100%;}
 
 /* Centered Hero, no CTA */
 .section--hero {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: #261b35;
 	background-image: none;
 	text-align: center;
 }
 .section__body--hero {
-	padding: 4rem 0 3rem;
+	padding: 1.5rem 0 1rem;
+	margin: auto;
+	text-align: center;
 }
 .section__title--hero {
-	margin-bottom: 2.625rem; /* 42px */
-}
-.section__copy--hero {
-	margin-bottom: 0;
-	font-size: 1.25rem; /* 20px */
+	text-align: center;
+	font-size: 3.25rem; /* 35px */
 }
 
-.section__image {
-	overflow: hidden;
+.section__title--hero::after {
+	margin-bottom: 2.625rem; /* 42px */
+	bottom: -3.5rem; /* 40px */
+}
+
+.section__copy--hero {
+	font-size: 1.25rem;
+  line-height: 1.875rem;
+  color: #5a5665;
+  max-width: 31rem;
+  margin: 0 auto 0rem;
+  padding: 0 2rem;
 }
 
 @media screen and (max-width: 1023px) {
-	.section {
-		flex-direction: column;
-		padding: 3rem 5%;
-		text-align: center;
-		align-items: center;
+	.section__pic {order: 1;}
+	.section__body {order: 2; padding: 1rem;}
+	/* Skills icons */
+	.section__pic--skills {
+		max-width: 80%;
+		margin: auto;
 	}
-	.section__copy {
-		max-width: 25em;
+	.section__body--hero {
+		padding: 10.5rem 0 14rem
 	}
-	.section__image {
-		order: 1;
-		margin-bottom: 3rem;
-		max-width: 100%;
+	.section__title--hero {
+		font-size: 2.2rem;
 	}
-	.section__body {
-		order: 2;
+	.section__subtitle::after {
+		left: calc(50% - 1.4375rem);
+	}
+}
+@media screen and (min-width: 800px) {
+	.section__title--logo {
+		font-size: 2.5rem;
 	}
 }
 @media screen and (min-width: 1024px) {
 	.section {
-		/* Lea's technique to avoid the use of a .wrap div */
-		max-width: 1024px;
-    	padding: 6rem calc(50% - 480px);
-    	/* we want 1rem left/right separation (1024px/2 = 512px - 2rem = 480px) */
-	}
-	.section__title {
-		font-size: 4rem;
-		letter-spacing: -2px;
-		line-height: .85;
-		margin: -8px 0 0 0; /* -8px aligns title with aside picture */
-	}
-	.section__copy {
-		font-size: 1.4rem;
-		line-height: 1.3;
-	}
-
-	/* layouts / alignment */
-	.section__body {
-		max-width: 53%;
-	}
-	.section__body--left {
-		margin-right: auto;
-		margin-left: 1rem;
-	}
-	.section__body--right {
-		order: 2;
-		margin-left: auto;
-		margin-right: 1rem;
-	}
-
-	.section__image--left {margin-left: auto;}
-	.section__image--right {
-		margin-right: 3rem;
-		order: 1;
-	}
-	.section__body--center {
-		width: 100%;
+		align-items: center;
+		justify-content: space-between;
+		flex-direction: row;
 		max-width: 100%;
-		text-align: center;
-	}
-	.section__copy--center {
-		max-width: 27.5em;
-		margin: 0 auto;
-	}
-}
-@media screen and (min-width: 1280px) {
-	.section {
-		/* Lea's technique to avoid the use of a .wrap div */
-		max-width: 1280px;
-		padding: 8rem calc(50% - 608px);
+		overflow-x: hidden;
+		text-align: left;
 	}
 	.section__title {
-		margin-top: -.625rem; /* -10px aligns title with aside picture */
+		font-size: 2.25rem;
+		margin-bottom: 5rem;
 	}
-	.section__body--left {
+	.section__title::after {
+		left: 0;
+	}
+	.section__title--hero {
+		font-size: 3.45rem;
+	}
+	.section__title--hero::after {
+		bottom: -4rem;
+	}
+	.section__title--logo span {
+		position: relative;
+	}
+
+	.section__title--logo span::after {
+		width: 2px;
+		height: 3.4rem;
+		top: 50%;
+		transform: translate(0, -50%);
+		left: -3.5rem;
+		margin-top: 3px;
+	}
+
+	.section__copy {
+		font-size: 1.375rem; /* 22px */
+		line-height: 2.25rem; /* 36px */
+		padding: 0;
 		margin-left: 0;
 	}
-	.section__body--right {
-		margin-right: 0;
+	.section__copy__hr {
+		margin-left: 0;
 	}
+	.section__pic {
+		width: auto;
+    margin-bottom: 0;
+    max-height: 500px;
+	}
+	.section__pic__img {
+		max-height: 500px;
+	}
+	/* Skills icons */
+	.section__pic--skills {
+		max-width: 50%;
+		margin-left: auto;
+	}
+
+	/* Pic on the left */
+	.section--left {
+		flex-direction: row-reverse;
+	}
+	.section__body--right .section__copy {
+		max-width: 20rem;
+	}
+	.section__body--left {
+		margin-left: auto;
+	}
+	/* remove frame from Skills icons */
+	.section__pic--skills::before, .section__pic--skills::after {
+		display: none;
+	}
+
+	.section__body--right .section__copy,
 	.section__copy {
-		font-size: 1.6rem;
-		line-height: 2.2rem;
+		max-width: 25rem;
 	}
-	.section__image--right {
-		margin-right: 6rem;
+
+		/* gray frame */
+	.section__pic::before, .section__pic::after {
+		content: '';
+		display: block;
+		background-color: #f1f1f5;
+		position: absolute;
+	}
+	.section__pic--left::before {
+		width: 20px;
+		height: calc(100% - 10px);
+		right: -20px;
+		top: 30px;
+	}
+	.section__pic--left::after {
+		width: calc(100% - 30px);
+		height: 20px;
+		right: 0;
+		bottom: -20px;
+	}
+	.section__pic--right::before {
+		width: 20px;
+		height: calc(100% - 10px);
+		left: -20px;
+		top: 30px;
+	}
+	.section__pic--right::after {
+		width: calc(100% - 30px);
+		height: 20px;
+		left: 0;
+		bottom: -20px;
+	}
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1039px) {
+	.section__pic, .section__pic__img {
+    max-height: 400px;
+		opacity: 1;
+		transition: all .3s ease-in;
+	}
+}
+@media screen and (min-width: 1040px) and (max-width: 1115px) {
+	.section__pic, .section__pic__img {
+    max-height: 420px;
+	}
+}
+@media screen and (min-width: 1116px) and (max-width: 1199px) {
+	.section__title--logo {
+		font-size: 2.25rem;
+	}
+}
+@media screen and (min-width: 1024px) and (max-width: 1115px) {
+	.section {
+		padding: 6rem calc(51% - 480px);
+	}
+	.section__pic--left {
+		margin-left: -10%;
+	}
+	/* right picture is sticked to the right */
+	.landing-tech .section--right {
+		margin-bottom: 6rem;
+	}
+	.section__pic--right {
+		position: absolute;
+    right: 0;
+    margin: 0 auto auto 0;
+	}
+	.section__pic--list {
+    margin-left: -35%;
+	}
+	.section__title--logo {
+		font-size: 2rem;
+	}
+}
+
+@media screen and (min-width: 1116px) and (max-width: 1199px) {
+	.section {
+		padding: 6rem calc(50% - 500px);
+	}
+	.section__pic, .section__pic__img {
+    max-height: 450px;
+	}
+	.section__pic--left {
+		margin-left: -10%;
+	}
+	.section__pic--right {
+		margin-right: -10%;
+	}
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1299px) {
+	.section {
+		padding: 6rem calc(50% - 530px);
+	}
+	.section__pic, .section__pic__img {
+    max-height: 520px;
+	}
+	.section__pic--left {
+		margin-left: -10%;
+	}
+	.section__pic--right {
+		margin-right: -10%;
+	}
+	.landing-tech .section__pic--right {
+		margin-right: -18%;
+	}
+	.landing-tech .section__title--logo {
+    max-width: 10em;
+	}
+}
+
+@media screen and (min-width: 1300px) and (max-width: 1399px) {
+	.section {
+		padding: 6rem calc(50% - 560px);
+	}
+	.section__pic, .section__pic__img {
+    max-height: 580px;
+	}
+	.section__pic--left {
+		margin-left: -12%;
+	}
+	.section__pic--right {
+		margin-right: -12%;
+	}
+	.landing-tech .section__pic--right {
+		margin-right: -18%;
+	}
+	.landing-tech .section__title--logo {
+    max-width: 10em;
+	}
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1449px) {
+	.section {
+		padding: 6rem calc(50% - 600px);
+	}
+	.section__pic, .section__pic__img {
+    max-height: 620px;
+	}
+	.section__pic--left {
+		margin-left: -10%;
+	}
+	.section__pic--right {
+		margin-right: -10%;
+	}
+	.landing-tech .section__pic--right {
+		margin-right: -18%;
+	}
+	.landing-tech .section__title--logo {
+    max-width: 10em;
+	}
+}
+
+@media screen and (min-width: 1450px) and (max-width: 1499px) {
+	.section {
+		padding: 6rem calc(50% - 620px);
+	}
+	.section__pic, .section__pic__img {
+    max-height: 660px;
+	}
+	.section__pic--left {
+		margin-left: -10%;
+	}
+	.section__pic--right {
+		margin-right: -10%;
+	}
+	.landing-tech .section__pic--right {
+		margin-right: -18%;
+	}
+	.landing-tech .section__title--logo {
+    max-width: 10em;
+	}
+}
+
+@media screen and (min-width: 1500px) {
+	.section {
+		padding: 6rem calc(52% - 640px);
+	}
+	.section__pic, .section__pic__img {
+    max-height: 650px;
+	}
+	.section__pic--left {
+		margin-left: -10%;
+	}
+	.section__pic--right {
+		margin-right: -10%;
+	}
+	.landing-tech .section__pic--right {
+		margin-right: -20%;
 	}
 }
